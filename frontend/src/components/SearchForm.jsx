@@ -108,7 +108,7 @@ export default function SearchForm({
               data-1p-ignore="true"
               data-bwignore="true"
               readOnly={regionReadOnly}
-              value={regionReadOnly ? getRegionDisplayLabel(language, region) : region}
+              value={getRegionDisplayLabel(language, region)}
               onChange={(e) => onRegionChange(e.target.value)}
               onMouseDown={() => setRegionReadOnly(false)}
               onFocus={(e) => {
