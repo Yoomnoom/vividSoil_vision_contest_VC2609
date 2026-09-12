@@ -34,3 +34,14 @@ export function isSeoulRegion(value) {
   if (trimmed.includes('서울')) return true
   return SEOUL_DISTRICTS.some((district) => trimmed.includes(district))
 }
+
+// 카카오맵 역지오코딩 주소("서울특별시 강남구 역삼동")는 드롭다운에서 자치구를 직접
+// 선택했을 때와 형식이 달라서, region 표시 다국어 처리(getRegionDisplayLabel)가 못
+// 알아본다. 같은 "구(동1, 동2, 동3)" 형식으로 맞춰서 현위치로 찾을 때도 드롭다운
+// 선택과 동일하게 취급되도록 한다.
+export function toCanonicalRegion(address) {
+  const trimmed = (address || '').trim()
+  const district = SEOUL_DISTRICTS.find((d) => trimmed.includes(d))
+  if (!district) return trimmed
+  return `${district}(${SEOUL_DISTRICT_AREAS[district].join(', ')})`
+}

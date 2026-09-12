@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { API_BASE } from '../apiBase'
+import { getStrings } from '../i18n'
 
 const FLAGS = { JPY: '🇯🇵', USD: '🇺🇸', CNY: '🇨🇳' }
 const ROTATE_INTERVAL_MS = 3000
 
-export default function ExchangeRateTicker() {
+export default function ExchangeRateTicker({ language = 'ko' }) {
+  const t = getStrings(language)
   const [rates, setRates] = useState([])
   const [index, setIndex] = useState(0)
 
@@ -44,7 +46,8 @@ export default function ExchangeRateTicker() {
     <div className="exchange-rate-ticker" aria-live="polite">
       <span className="exchange-rate-flag">{FLAGS[current.code]}</span>
       <span className="exchange-rate-text">
-        1 {current.code} = {current.rate.toLocaleString('ko-KR')}원
+        1 {current.code} = {current.rate.toLocaleString('ko-KR')}
+        {language === 'ko' ? t.krwUnit : ` ${t.krwUnit}`}
       </span>
     </div>
   )

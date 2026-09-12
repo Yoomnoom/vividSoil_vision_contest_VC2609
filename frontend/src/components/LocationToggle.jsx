@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { API_BASE } from '../apiBase'
-import { isSeoulRegion } from '../seoulDistricts'
+import { isSeoulRegion, toCanonicalRegion } from '../seoulDistricts'
 import { getStrings } from '../i18n'
 
 async function reverseGeocode(latitude, longitude, fallbackError) {
@@ -39,7 +39,7 @@ export default function LocationToggle({ onLocate, language = 'ko' }) {
             window.alert(t.seoulOnlyAlert)
             return
           }
-          onLocate?.(place)
+          onLocate?.(toCanonicalRegion(place))
           setActive(true)
         } catch (err) {
           setError(err.message)
