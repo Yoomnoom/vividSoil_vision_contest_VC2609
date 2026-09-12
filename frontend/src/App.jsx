@@ -11,6 +11,11 @@ import { getRegionDisplayLabel } from './seoulDistrictsI18n'
 import useIsMobile from './useIsMobile'
 import './App.css'
 
+// 비짓서울 상세조회 캐시가 비어있는 첫 검색은 오래 걸릴 수 있지만, 그렇다고
+// 무한정 기다리게 두면 멈춘 것처럼 보인다. 이 시간을 넘기면 요청을 끊고
+// "불러오지 못했습니다 · 다시 시도" 상태로 전환한다.
+const RECOMMEND_TIMEOUT_MS = 40000
+
 function App() {
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -65,20 +70,29 @@ function App() {
       hourly_weather: null,
       recommendation: getPlaceholderRecommendation(searchRegion, language),
       isPreview: true,
+      loadFailed: false,
     })
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), RECOMMEND_TIMEOUT_MS)
     try {
       const res = await fetch(`${API_BASE}/api/recommend`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ region: searchRegion, date, endDate, language }),
+        signal: controller.signal,
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || t.fetchError)
       setResult({ ...data, date, endDate })
     } catch (err) {
-      setError(err.message)
-      setResult(null)
+      if (err.name === 'AbortError') {
+        setResult((prev) => (prev ? { ...prev, isPreview: false, loadFailed: true } : prev))
+      } else {
+        setError(err.message)
+        setResult(null)
+      }
     } finally {
+      clearTimeout(timeoutId)
       setLoading(false)
     }
   }

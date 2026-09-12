@@ -4,7 +4,16 @@ import requests
 
 CONTENTS_LIST_URL = "https://api-call.visitseoul.net/api/v1/contents/list"
 CONTENTS_INFO_URL = "https://api-call.visitseoul.net/api/v1/contents/info"
-DETAIL_URL_TEMPLATE = "https://korean.visitseoul.net/attractions/detail/{cid}"
+# 상세페이지는 언어별로 서브도메인이 분리돼 있어서(korean/english/japanese/chinese
+# .visitseoul.net), 링크를 언어와 다르게 korean으로 고정하면 "다른 언어로 보고 있는데
+# 자세히보기를 누르면 한국어 페이지로 이동"하는 문제가 생긴다.
+DETAIL_URL_SUBDOMAINS = {"ko": "korean", "en": "english", "ja": "japanese", "zh": "chinese"}
+
+
+def build_detail_url(cid: str, lang_code_id: str = "ko") -> str:
+    subdomain = DETAIL_URL_SUBDOMAINS.get(lang_code_id, "korean")
+    return f"https://{subdomain}.visitseoul.net/attractions/detail/{cid}"
+
 
 # 프론트엔드 language 코드 -> 비짓서울 lang_code_id (중국어만 zh-CN으로 다름)
 LANG_CODE_MAP = {"ko": "ko", "en": "en", "ja": "ja", "zh": "zh-CN"}

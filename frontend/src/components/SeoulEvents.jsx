@@ -5,7 +5,9 @@ import { SEOUL_DISTRICTS } from '../seoulDistricts'
 import placeholderCsv from '../data/seoulContentsPlaceholder.csv?raw'
 
 const VISITSEOUL_LANG_CODES = { ko: 'ko', en: 'en', ja: 'ja', zh: 'zh-CN' }
-const DETAIL_URL_TEMPLATE = 'https://korean.visitseoul.net/attractions/detail/{cid}'
+// 상세페이지는 언어별로 서브도메인이 분리돼 있어서, 지금 보고 있는 언어와 다른
+// (항상 한국어) 서브도메인으로 보내면 안 된다.
+const DETAIL_URL_SUBDOMAINS = { ko: 'korean', en: 'english', ja: 'japanese', zh: 'chinese' }
 
 // 비짓서울 API 응답 지연 동안 결과 화면이 비어 보이지 않도록, 최근에 수집해 둔 CSV
 // 데이터를 우선 보여주고 실제 API 응답이 도착하면 조용히 교체한다(placeholder는 즉시,
@@ -24,23 +26,24 @@ function getPlaceholderItems(keyword, language, region) {
       item.keyword === keyword &&
       item.lang === language &&
       (district === null || item.district === district)
-  ).map(normalizeItem)
+  ).map((item) => normalizeItem(item, language))
 }
 
-function detailUrl(cid) {
-  return DETAIL_URL_TEMPLATE.replace('{cid}', cid)
+function detailUrl(cid, language) {
+  const subdomain = DETAIL_URL_SUBDOMAINS[language] || 'korean'
+  return `https://${subdomain}.visitseoul.net/attractions/detail/${cid}`
 }
 
 // /api/seoul-contents는 region이 넘어가면 candidate_service의 결과(name/description/photo_url/
 // detail_url 형태)를 그대로 돌려주므로, placeholder CSV 행(post_sj/sumry/main_img 등 비짓서울
 // 원본 필드명)과 형태를 맞춰 이 컴포넌트의 렌더링 로직을 하나로 유지한다.
-function normalizeItem(item) {
+function normalizeItem(item, language) {
   return {
     cid: item.cid,
     main_img: item.photo_url ?? item.main_img,
     post_sj: item.name ?? item.post_sj,
     sumry: item.description ?? item.sumry,
-    detail_url: item.detail_url || (item.cid ? detailUrl(item.cid) : null),
+    detail_url: item.detail_url || (item.cid ? detailUrl(item.cid, language) : null),
   }
 }
 
@@ -66,7 +69,7 @@ export default function SeoulEvents({ language = 'ko', region, keyword, title, m
         const res = await fetch(`${API_BASE}/api/seoul-contents?${params}`)
         const data = await res.json()
         if (!res.ok) throw new Error(data.error || fetchError)
-        if (!cancelled) setItems((data.data || []).map(normalizeItem))
+        if (!cancelled) setItems((data.data || []).map((item) => normalizeItem(item, language)))
       } catch (err) {
         // 이미 placeholder 데이터를 보여주고 있다면 그대로 유지하고, 없을 때만 에러를 표시한다.
         if (!cancelled && placeholderItems.length === 0) setError(err.message)

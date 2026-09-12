@@ -8,8 +8,8 @@ import requests
 from services.cache import cached
 from services.visitseoul_service import (
     CATEGORY_IDS,
-    DETAIL_URL_TEMPLATE,
     SEOUL_DISTRICTS,
+    build_detail_url,
     extract_district,
     get_category_contents,
     get_content_detail,
@@ -192,7 +192,7 @@ def get_category_candidates(
         localized = list(executor.map(lambda item: _localize(item, lang_code_id), items))
 
     return [
-        {**loc, "detail_url": DETAIL_URL_TEMPLATE.format(cid=loc["cid"])}
+        {**loc, "detail_url": build_detail_url(loc["cid"], lang_code_id)}
         for loc in localized
         if loc and loc.get("name")
     ]

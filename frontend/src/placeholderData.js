@@ -11,7 +11,9 @@ import placeholderCsv from './data/seoulContentsPlaceholder.csv?raw'
 // 자치구는 실제 검색된 자치구와 일치하는 행만 보여준다(백엔드 candidate_service와 같은 원칙 -
 // 다른 자치구 콘텐츠로 대체하지 않음). CSV 수집량이 자치구별로 고르지 않아, 수집이 적은 자치구는
 // 카테고리 대부분이 미리보기 단계에서 비어 있을 수 있다 - 실제 추천이 도착하면 채워진다.
-const DETAIL_URL_TEMPLATE = 'https://korean.visitseoul.net/attractions/detail/{cid}'
+// 상세페이지는 언어별로 서브도메인이 분리돼 있어서, 지금 보고 있는 언어와 다른
+// (항상 한국어) 서브도메인으로 보내면 안 된다.
+const DETAIL_URL_SUBDOMAINS = { ko: 'korean', en: 'english', ja: 'japanese', zh: 'chinese' }
 const PLACEHOLDER_ROWS = parseCsv(placeholderCsv)
 const PLACEHOLDER_CATEGORY_COUNT = 6
 
@@ -23,13 +25,14 @@ function resolveDistrict(region) {
   return SEOUL_DISTRICTS.find((district) => (region || '').includes(district)) || null
 }
 
-function toCategoryItem(row) {
+function toCategoryItem(row, language) {
+  const subdomain = DETAIL_URL_SUBDOMAINS[language] || 'korean'
   return {
     name: row.post_sj,
     description: row.sumry,
     why_this_weather: '',
     photo_url: row.main_img || null,
-    detail_url: row.cid ? DETAIL_URL_TEMPLATE.replace('{cid}', row.cid) : null,
+    detail_url: row.cid ? `https://${subdomain}.visitseoul.net/attractions/detail/${row.cid}` : null,
   }
 }
 
@@ -45,7 +48,7 @@ export function getPlaceholderRecommendation(region, language) {
         (district === null || row.district === district)
     )
       .slice(0, PLACEHOLDER_CATEGORY_COUNT)
-      .map(toCategoryItem)
+      .map((row) => toCategoryItem(row, language))
     if (items.length > 0) categories[category] = { section_title: '', items }
   }
   return { weather_desc: '', spot_reason: '', weather_picks: [], categories }

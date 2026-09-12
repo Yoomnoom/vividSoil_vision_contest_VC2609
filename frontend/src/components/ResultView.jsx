@@ -11,8 +11,14 @@ const TABS = [ALL_TAB, ...CATEGORIES]
 const PREVIEW_SIZE = 3
 const PAGE_SIZE = 6
 
-function googleMapSearchUrl(region, name) {
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${region} ${name}`)}`
+// 구글 지도 자체는 한국어 지명 기준으로 검색해야 정확도가 높지만(장소명은 검색해도 이미
+// 언어별로 번역돼 있음), 결과 페이지의 지도 UI(버튼·라벨)는 hl 파라미터로 지금 보고 있는
+// 언어에 맞출 수 있다.
+const GOOGLE_MAPS_HL = { ko: 'ko', en: 'en', ja: 'ja', zh: 'zh-CN' }
+
+function googleMapSearchUrl(region, name, language) {
+  const hl = GOOGLE_MAPS_HL[language] || 'ko'
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${region} ${name}`)}&hl=${hl}`
 }
 
 function splitRegionLabel(region) {
@@ -27,7 +33,7 @@ function formatDateWithWeekday(dateStr, language) {
   return `${formatted} (${getWeekdays(language)[d.getDay()]})`
 }
 
-function RecommendationCard({ region, item, t }) {
+function RecommendationCard({ region, item, t, language }) {
   return (
     <article className="rec-card">
       {item.photo_url && (
@@ -54,7 +60,7 @@ function RecommendationCard({ region, item, t }) {
         ) : (
           <a
             className="map-link"
-            href={googleMapSearchUrl(region, item.name)}
+            href={googleMapSearchUrl(region, item.name, language)}
             target="_blank"
             rel="noreferrer"
           >
@@ -71,7 +77,7 @@ function RecommendationCard({ region, item, t }) {
 // 보인다. 그 정도로 적을 때는 복제하지 않고 실제 개수만큼만 그대로 보여준다.
 const MIN_ITEMS_TO_LOOP = 4
 
-function WeatherPicksCarousel({ title, region, items, t }) {
+function WeatherPicksCarousel({ title, region, items, t, language }) {
   const scrollRef = useRef(null)
   const isJumping = useRef(false)
   const shouldLoop = items.length >= MIN_ITEMS_TO_LOOP
@@ -152,7 +158,7 @@ function WeatherPicksCarousel({ title, region, items, t }) {
       >
         {loopedItems.map((item, index) => (
           <div className="rec-card-slide" key={`${item.name}-${index}`}>
-            <RecommendationCard region={region} item={item} t={t} />
+            <RecommendationCard region={region} item={item} t={t} language={language} />
           </div>
         ))}
       </div>
@@ -160,7 +166,7 @@ function WeatherPicksCarousel({ title, region, items, t }) {
   )
 }
 
-function RecommendationSection({ title, region, items, isPreview, t }) {
+function RecommendationSection({ title, region, items, isPreview, t, language }) {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const visibleItems = isPreview ? items.slice(0, PREVIEW_SIZE) : items.slice(0, visibleCount)
   const hasMore = !isPreview && visibleCount < items.length
@@ -170,7 +176,7 @@ function RecommendationSection({ title, region, items, isPreview, t }) {
       <h3>{title}</h3>
       <div className="card-grid">
         {visibleItems.map((item) => (
-          <RecommendationCard key={item.name} region={region} item={item} t={t} />
+          <RecommendationCard key={item.name} region={region} item={item} t={t} language={language} />
         ))}
       </div>
       {hasMore && (
@@ -198,6 +204,7 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
     date,
     endDate,
     isPreview,
+    loadFailed,
   } = result
   const tripDays = weatherByDay && weatherByDay.length > 1 ? weatherByDay : null
   const startDateLabel = weather ? weather.date : date
@@ -224,23 +231,6 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
               ? ` ~ ${formatDateWithWeekday(endDateLabel, language)}`
               : ''}
           </span>
-          <button
-            type="button"
-            className={`refresh-btn${isPreview ? ' is-spinning' : ''}`}
-            onClick={onRefresh}
-            aria-label={t.refresh}
-            title={t.refresh}
-          >
-            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path
-                d="M16.5 10a6.5 6.5 0 1 1-2.1-4.8M16.5 3v3.7h-3.7"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
         </div>
 
         {isPreview && (
@@ -370,6 +360,13 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
               </div>
             )}
           </>
+        ) : loadFailed ? (
+          <div className="weather-failed">
+            <p>{t.weatherLoadFailed}</p>
+            <button type="button" className="weather-retry-btn" onClick={onRefresh}>
+              {t.weatherRetry}
+            </button>
+          </div>
         ) : (
           <div className="weather-loading">
             <span className="weather-loading-spinner" aria-hidden="true" />
@@ -384,6 +381,7 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
           region={region}
           items={recommendation.weather_picks}
           t={t}
+          language={language}
         />
       )}
 
@@ -410,6 +408,7 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
           items={items}
           isPreview={activeTab === ALL_TAB}
           t={t}
+          language={language}
         />
       ))}
     </div>
