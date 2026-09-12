@@ -7,6 +7,7 @@ import { API_BASE } from './apiBase'
 import { ALL_TAB, CATEGORIES } from './categories'
 import { getStrings, getContentsTitle, getContentsFetchError } from './i18n'
 import { getPlaceholderRecommendation } from './placeholderData'
+import { getRegionDisplayLabel } from './seoulDistrictsI18n'
 import useIsMobile from './useIsMobile'
 import './App.css'
 
@@ -43,6 +44,12 @@ function App() {
       resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }, [result])
+
+  useEffect(() => {
+    // <html lang>을 앱 언어와 맞춰줘야 브라우저 기본 날짜 선택기(연도-월-일 입력)의
+    // 요일·오늘/삭제 버튼 표기도 같이 바뀐다(이 부분은 CSS/JS로 직접 못 바꾸는 OS 네이티브 UI).
+    document.documentElement.lang = language
+  }, [language])
 
   async function runSearch(searchRegion, date, endDate, { resetTab = true } = {}) {
     setLoading(true)
@@ -113,7 +120,7 @@ function App() {
                   <path d="M12 2C7.86 2 4.5 5.36 4.5 9.5c0 5.25 6.32 11.5 7.02 12.2a.68.68 0 0 0 .96 0c.7-.7 7.02-6.95 7.02-12.2C19.5 5.36 16.14 2 12 2Zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5Z" />
                 </svg>
                 <span className="sticky-search-text">
-                  {region} · {startDate}
+                  {getRegionDisplayLabel(language, region)} · {startDate}
                 </span>
               </button>
             ) : (

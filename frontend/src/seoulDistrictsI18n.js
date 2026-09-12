@@ -118,3 +118,14 @@ export function getDistrictLabel(language, district) {
 export function getAreaLabel(language, area) {
   return AREA_NAMES[language]?.[area] || area
 }
+
+// 검색창에 이미 선택된 지역("중구(명동, 동대문, 을지로)")을 표시할 때 쓴다.
+// 실제 검색/API 요청값(region 상태)은 항상 이 함수를 거치지 않은 한국어 원문을 그대로 쓴다.
+export function getRegionDisplayLabel(language, region) {
+  if (!region || language === 'ko') return region
+  const match = region.match(/^(.+?)\((.+)\)$/)
+  if (!match) return getDistrictLabel(language, region)
+  const [, district, areasStr] = match
+  const areas = areasStr.split(',').map((area) => area.trim())
+  return `${getDistrictLabel(language, district)}(${areas.map((area) => getAreaLabel(language, area)).join(', ')})`
+}

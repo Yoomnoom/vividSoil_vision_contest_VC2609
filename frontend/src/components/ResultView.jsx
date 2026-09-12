@@ -5,6 +5,7 @@ import CategoryIcon from './CategoryIcon'
 import aiSparkleIcon from '../assets/ai-sparkle.png'
 import { CATEGORIES, ALL_TAB } from '../categories'
 import { getStrings, getCategoryLabel, getWeekdays } from '../i18n'
+import { getRegionDisplayLabel } from '../seoulDistrictsI18n'
 
 const TABS = [ALL_TAB, ...CATEGORIES]
 const PREVIEW_SIZE = 3
@@ -196,7 +197,7 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
   const categoryEntries = Object.entries(recommendation.categories).filter(
     ([category, { items }]) => (activeTab === ALL_TAB || category === activeTab) && items.length > 0
   )
-  const { main: regionMain, detail: regionDetail } = splitRegionLabel(region)
+  const { main: regionMain, detail: regionDetail } = splitRegionLabel(getRegionDisplayLabel(language, region))
 
   return (
     <div className="result">

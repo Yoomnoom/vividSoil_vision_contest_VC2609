@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { SEOUL_DISTRICTS, SEOUL_DISTRICT_AREAS, isSeoulRegion } from '../seoulDistricts'
-import { getDistrictLabel, getAreaLabel } from '../seoulDistrictsI18n'
+import { getDistrictLabel, getAreaLabel, getRegionDisplayLabel } from '../seoulDistrictsI18n'
 import { getStrings } from '../i18n'
 import useIsMobile from '../useIsMobile'
 import LocationToggle from './LocationToggle'
+import DatePicker from './DatePicker'
 
 const MAX_FORECAST_DAYS = 16
 
@@ -89,7 +90,7 @@ export default function SearchForm({
               type="text"
               autoComplete="off"
               readOnly
-              value={region}
+              value={getRegionDisplayLabel(language, region)}
               onClick={openRegionPicker}
               placeholder={t.regionPlaceholder}
               required
@@ -107,7 +108,7 @@ export default function SearchForm({
               data-1p-ignore="true"
               data-bwignore="true"
               readOnly={regionReadOnly}
-              value={region}
+              value={regionReadOnly ? getRegionDisplayLabel(language, region) : region}
               onChange={(e) => onRegionChange(e.target.value)}
               onMouseDown={() => setRegionReadOnly(false)}
               onFocus={(e) => {
@@ -151,6 +152,7 @@ export default function SearchForm({
                 onClick={() => {
                   onRegionChange('서울')
                   setShowRegionList(false)
+                  setRegionReadOnly(true)
                 }}
               >
                 {t.regionAllOption}
@@ -164,6 +166,7 @@ export default function SearchForm({
                   onClick={() => {
                     onRegionChange(`${r}(${SEOUL_DISTRICT_AREAS[r].join(', ')})`)
                     setShowRegionList(false)
+                    setRegionReadOnly(true)
                   }}
                 >
                   {getDistrictLabel(language, r)}
@@ -244,21 +247,14 @@ export default function SearchForm({
             </span>
           </div>
         )}
-        <div className="input-arrow-wrap">
-          <input
-            id={dateId}
-            type="date"
-            className="date-input"
-            value={startDate}
-            min={MIN_DATE_VALUE}
-            max={MAX_DATE_VALUE}
-            onChange={(e) => onStartDateChange(e.target.value)}
-            required
-          />
-          <svg className="field-arrow-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
+        <DatePicker
+          id={dateId}
+          value={startDate}
+          onChange={onStartDateChange}
+          min={MIN_DATE_VALUE}
+          max={MAX_DATE_VALUE}
+          language={language}
+        />
       </div>
 
       <button type="button" disabled={loading} onClick={handleSubmit}>
