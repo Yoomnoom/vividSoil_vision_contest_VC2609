@@ -638,6 +638,12 @@
   color: var(--text);
 }
 
+.region-suggestions-empty {
+  padding: 14px 15px;
+  font-size: 13px;
+  color: var(--text);
+}
+
 .region-sheet-overlay {
   position: fixed;
   inset: 0;

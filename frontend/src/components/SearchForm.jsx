@@ -61,6 +61,21 @@ export default function SearchForm({
     return region === '서울' ? false : region.startsWith(r)
   }
 
+  // 이미 자치구가 선택된 상태("마포구(합정, ...)")로 다시 포커스했을 때는 괄호 앞
+  // 자치구명만 검색어로 취급하고, 그 외에는 입력값 전체를 검색어로 쓴다.
+  const regionQuery = region.split('(')[0].trim().toLowerCase()
+  const filteredDistricts = regionQuery
+    ? SEOUL_DISTRICTS.filter((r) => {
+        const query = regionQuery
+        if (r.toLowerCase().includes(query)) return true
+        if (getDistrictLabel(language, r).toLowerCase().includes(query)) return true
+        return SEOUL_DISTRICT_AREAS[r].some(
+          (area) =>
+            area.toLowerCase().includes(query) || getAreaLabel(language, area).toLowerCase().includes(query)
+        )
+      })
+    : SEOUL_DISTRICTS
+
   function handleRegionKeyDown(e) {
     if (e.key === 'Enter') {
       e.preventDefault()
@@ -145,20 +160,22 @@ export default function SearchForm({
 
         {!isMobile && showRegionList && (
           <ul className="region-suggestions">
-            <li>
-              <button
-                type="button"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  onRegionChange('서울')
-                  setShowRegionList(false)
-                  setRegionReadOnly(true)
-                }}
-              >
-                {t.regionAllOption}
-              </button>
-            </li>
-            {SEOUL_DISTRICTS.map((r) => (
+            {!regionQuery && (
+              <li>
+                <button
+                  type="button"
+                  onMouseDown={(e) => e.preventDefault()}
+                  onClick={() => {
+                    onRegionChange('서울')
+                    setShowRegionList(false)
+                    setRegionReadOnly(true)
+                  }}
+                >
+                  {t.regionAllOption}
+                </button>
+              </li>
+            )}
+            {filteredDistricts.map((r) => (
               <li key={r}>
                 <button
                   type="button"
@@ -177,6 +194,9 @@ export default function SearchForm({
                 </button>
               </li>
             ))}
+            {regionQuery && filteredDistricts.length === 0 && (
+              <li className="region-suggestions-empty">{t.regionNoResults}</li>
+            )}
           </ul>
         )}
       </div>
