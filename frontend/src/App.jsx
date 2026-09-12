@@ -93,6 +93,11 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language])
 
+  function handleRefresh() {
+    if (!result || result.isPreview) return
+    runSearch(result.region, result.date, result.endDate, { resetTab: false })
+  }
+
   function scrollToSearchForm() {
     searchSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
@@ -152,7 +157,13 @@ function App() {
       {error && <p className="error">{error}</p>}
       {result && (
         <div ref={resultRef}>
-          <ResultView result={result} activeTab={activeTab} onTabChange={setActiveTab} language={language} />
+          <ResultView
+            result={result}
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            onRefresh={handleRefresh}
+            language={language}
+          />
         </div>
       )}
 

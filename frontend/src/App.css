@@ -633,6 +633,16 @@
   outline-offset: 1px;
 }
 
+/* 9개 탭이 한 줄에는 못 들어가지만 완전한 모바일 가로 스크롤 폭(560px)보다는
+   넓은 구간에서, flex-wrap이 6개/3개처럼 불균등하게 줄바꿈되는 것을 막고
+   3열로 고르게 정렬한다. */
+@media (min-width: 561px) and (max-width: 900px) {
+  .category-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .hint {
   font-size: 13px;
   line-height: 1.4;
@@ -718,6 +728,49 @@
   color: var(--text);
 }
 
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  border: 1px solid #d9dced;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text-h);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.refresh-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+.refresh-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.refresh-btn.is-spinning svg {
+  animation: refresh-spin 1s linear infinite;
+}
+
+@keyframes refresh-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .weather-top {
   display: flex;
   align-items: center;
@@ -777,11 +830,11 @@
 
 .weather-stat-label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 4px;
   font-size: 15px;
+  line-height: 1.25;
   color: var(--text);
-  white-space: nowrap;
 }
 
 .weather-stat-icon {

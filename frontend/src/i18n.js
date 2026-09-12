@@ -128,6 +128,7 @@ const STRINGS = {
     shoppingContentsFetchError: '쇼핑 정보를 불러오지 못했습니다.',
     weatherLoading: '날씨 정보를 불러오는 중…',
     previewBadge: 'AI 맞춤 추천 준비 중 · 우선 서울의 인기 스팟을 보여드려요',
+    refresh: '새로고침',
   },
   en: {
     appTitle: 'VividSoul',
@@ -170,6 +171,7 @@ const STRINGS = {
     shoppingContentsFetchError: 'Failed to load shopping information.',
     weatherLoading: 'Loading weather…',
     previewBadge: 'Preparing your AI picks · showing popular Seoul spots first',
+    refresh: 'Refresh',
   },
   ja: {
     appTitle: 'VividSoul',
@@ -212,6 +214,7 @@ const STRINGS = {
     shoppingContentsFetchError: 'ショッピング情報を取得できませんでした。',
     weatherLoading: '天気情報を取得中…',
     previewBadge: 'AIおすすめを準備中 · まずソウルの人気スポットを表示します',
+    refresh: '更新',
   },
   zh: {
     appTitle: 'VividSoul',
@@ -254,6 +257,7 @@ const STRINGS = {
     shoppingContentsFetchError: '无法获取购物信息。',
     weatherLoading: '正在获取天气信息…',
     previewBadge: 'AI推荐生成中 · 先为您展示首尔人气景点',
+    refresh: '刷新',
   },
 }
 

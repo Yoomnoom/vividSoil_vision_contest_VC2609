@@ -177,7 +177,7 @@ function RecommendationSection({ title, region, items, isPreview, t }) {
   )
 }
 
-export default function ResultView({ result, activeTab, onTabChange, language = 'ko' }) {
+export default function ResultView({ result, activeTab, onTabChange, onRefresh, language = 'ko' }) {
   const t = getStrings(language)
   const [showHourly, setShowHourly] = useState(false)
   const {
@@ -215,6 +215,24 @@ export default function ResultView({ result, activeTab, onTabChange, language = 
               ? ` ~ ${formatDateWithWeekday(endDateLabel, language)}`
               : ''}
           </span>
+          <button
+            type="button"
+            className={`refresh-btn${isPreview ? ' is-spinning' : ''}`}
+            onClick={onRefresh}
+            disabled={isPreview}
+            aria-label={t.refresh}
+            title={t.refresh}
+          >
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path
+                d="M16.5 10a6.5 6.5 0 1 1-2.1-4.8M16.5 3v3.7h-3.7"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
 
         {isPreview && (
