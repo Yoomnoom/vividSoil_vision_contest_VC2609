@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { SEOUL_DISTRICTS, SEOUL_DISTRICT_AREAS, isSeoulRegion } from '../seoulDistricts'
 import { getDistrictLabel, getAreaLabel } from '../seoulDistrictsI18n'
 import { getStrings } from '../i18n'
+import useIsMobile from '../useIsMobile'
 import LocationToggle from './LocationToggle'
 
 const MAX_FORECAST_DAYS = 16
@@ -20,23 +21,6 @@ MAX_DATE.setDate(MAX_DATE.getDate() + MAX_FORECAST_DAYS - 1)
 const MIN_DATE_VALUE = toDateInputValue(TODAY)
 const MAX_DATE_VALUE = toDateInputValue(MAX_DATE)
 
-const MOBILE_QUERY = '(max-width: 560px)'
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia(MOBILE_QUERY).matches
-  )
-
-  useEffect(() => {
-    const mql = window.matchMedia(MOBILE_QUERY)
-    const handler = (e) => setIsMobile(e.matches)
-    mql.addEventListener('change', handler)
-    return () => mql.removeEventListener('change', handler)
-  }, [])
-
-  return isMobile
-}
-
 export default function SearchForm({
   region,
   onRegionChange,
@@ -47,12 +31,16 @@ export default function SearchForm({
   presetRegion,
   onLocate,
   language = 'ko',
+  compact = false,
 }) {
   const t = getStrings(language)
   const isMobile = useIsMobile()
   const [showRegionSheet, setShowRegionSheet] = useState(false)
   const [showRegionList, setShowRegionList] = useState(false)
   const [regionReadOnly, setRegionReadOnly] = useState(true)
+  const idPrefix = compact ? 'compact-' : ''
+  const regionId = `${idPrefix}region`
+  const dateId = `${idPrefix}date`
 
   useEffect(() => {
     if (presetRegion) onRegionChange(presetRegion)
@@ -76,7 +64,7 @@ export default function SearchForm({
     if (e.key === 'Enter') {
       e.preventDefault()
       setShowRegionList(false)
-      document.getElementById('date')?.focus()
+      document.getElementById(dateId)?.focus()
     }
   }
 
@@ -85,16 +73,18 @@ export default function SearchForm({
   }
 
   return (
-    <div className="search-form">
+    <div className={`search-form${compact ? ' search-form-compact' : ''}`}>
       <div className="field region-field">
-        <div className="field-label-row">
-          <label htmlFor="region">{t.regionLabel}</label>
-          <LocationToggle onLocate={onLocate} language={language} />
-        </div>
+        {!compact && (
+          <div className="field-label-row">
+            <label htmlFor={regionId}>{t.regionLabel}</label>
+            <LocationToggle onLocate={onLocate} language={language} />
+          </div>
+        )}
         <div className="input-arrow-wrap">
           {isMobile ? (
             <input
-              id="region"
+              id={regionId}
               name="trip-region"
               type="text"
               autoComplete="off"
@@ -106,7 +96,7 @@ export default function SearchForm({
             />
           ) : (
             <input
-              id="region"
+              id={regionId}
               name="trip-region"
               type="search"
               autoComplete="off"
@@ -241,20 +231,22 @@ export default function SearchForm({
         )}
 
       <div className="field">
-        <div className="field-label-row">
-          <label htmlFor="date">{t.dateLabel}</label>
-          <span className="hint">
-            {t.dateHint(MAX_FORECAST_DAYS).split('\n').map((line, i) => (
-              <span key={i}>
-                {i > 0 && <br />}
-                {line}
-              </span>
-            ))}
-          </span>
-        </div>
+        {!compact && (
+          <div className="field-label-row">
+            <label htmlFor={dateId}>{t.dateLabel}</label>
+            <span className="hint">
+              {t.dateHint(MAX_FORECAST_DAYS).split('\n').map((line, i) => (
+                <span key={i}>
+                  {i > 0 && <br />}
+                  {line}
+                </span>
+              ))}
+            </span>
+          </div>
+        )}
         <div className="input-arrow-wrap">
           <input
-            id="date"
+            id={dateId}
             type="date"
             className="date-input"
             value={startDate}

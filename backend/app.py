@@ -6,9 +6,10 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from pipeline import get_travel_recommendation
+from services.candidate_service import get_category_candidates, resolve_district
 from services.exim_service import get_exchange_rates
 from services.kakao_service import reverse_geocode
-from services.visitseoul_service import get_contents, get_festival_contents
+from services.visitseoul_service import CATEGORY_IDS, get_contents
 
 app = Flask(__name__)
 CORS(app)
@@ -46,16 +47,21 @@ def reverse_geocode_endpoint():
 def seoul_contents_endpoint():
     keyword = request.args.get("keyword", "")
     lang_code_id = request.args.get("lang", "ko")
+    region = request.args.get("region", "")
     try:
         page_no = int(request.args.get("page", "1"))
     except ValueError:
         page_no = 1
 
     try:
-        if keyword == "축제":
-            result = get_festival_contents(lang_code_id=lang_code_id, page_no=page_no)
-        else:
-            result = get_contents(keyword=keyword, lang_code_id=lang_code_id, page_no=page_no)
+        if keyword in CATEGORY_IDS:
+            # region이 넘어오면(검색으로 선택된 자치구) 그 자치구 콘텐츠만 후보로 채운다 -
+            # /api/recommend와 같은 candidate_service를 써서, 매칭이 부족해도 다른
+            # 자치구로 대체하지 않는다(get_category_candidates 참고).
+            district = resolve_district(region) if region else None
+            items = get_category_candidates(keyword, district, lang_code_id)
+            return jsonify({"result_code": 200, "data": items})
+        result = get_contents(keyword=keyword, lang_code_id=lang_code_id, page_no=page_no)
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": "관광 콘텐츠 조회 중 오류가 발생했습니다.", "detail": str(e)}), 500

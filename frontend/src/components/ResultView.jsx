@@ -57,9 +57,15 @@ function RecommendationCard({ region, item, t }) {
   )
 }
 
+// 무한 스크롤처럼 보이게 카드를 3배 복제하는 기법이라, 한 화면에 보이는 카드 수보다
+// items가 적으면 복제본끼리 바로 옆에서 겹쳐 보여 "같은 장소가 중복으로 나온다"처럼
+// 보인다. 그 정도로 적을 때는 복제하지 않고 실제 개수만큼만 그대로 보여준다.
+const MIN_ITEMS_TO_LOOP = 4
+
 function WeatherPicksCarousel({ title, region, items, t }) {
   const scrollRef = useRef(null)
   const isJumping = useRef(false)
+  const shouldLoop = items.length >= MIN_ITEMS_TO_LOOP
 
   function getCardStep(el) {
     const card = el.querySelector('.rec-card-slide')
@@ -68,7 +74,7 @@ function WeatherPicksCarousel({ title, region, items, t }) {
 
   function handleScroll() {
     const el = scrollRef.current
-    if (!el || isJumping.current) return
+    if (!shouldLoop || !el || isJumping.current) return
 
     const cardStep = getCardStep(el)
     const loopWidth = cardStep * items.length
@@ -91,7 +97,7 @@ function WeatherPicksCarousel({ title, region, items, t }) {
     el.scrollBy({ left: direction * getCardStep(el), behavior: 'smooth' })
   }
 
-  const loopedItems = [...items, ...items, ...items]
+  const loopedItems = shouldLoop ? [...items, ...items, ...items] : items
 
   return (
     <section className="rec-section">
@@ -126,9 +132,11 @@ function WeatherPicksCarousel({ title, region, items, t }) {
           scrollRef.current = el
           if (el && !el.dataset.initialized) {
             el.dataset.initialized = 'true'
-            requestAnimationFrame(() => {
-              el.scrollLeft = getCardStep(el) * items.length
-            })
+            if (shouldLoop) {
+              requestAnimationFrame(() => {
+                el.scrollLeft = getCardStep(el) * items.length
+              })
+            }
           }
         }}
         onScroll={handleScroll}
@@ -172,10 +180,21 @@ function RecommendationSection({ title, region, items, isPreview, t }) {
 export default function ResultView({ result, activeTab, onTabChange, language = 'ko' }) {
   const t = getStrings(language)
   const [showHourly, setShowHourly] = useState(false)
-  const { region, weather, weather_by_day: weatherByDay, hourly_weather: hourlyWeather, recommendation } = result
+  const {
+    region,
+    weather,
+    weather_by_day: weatherByDay,
+    hourly_weather: hourlyWeather,
+    recommendation,
+    date,
+    endDate,
+    isPreview,
+  } = result
   const tripDays = weatherByDay && weatherByDay.length > 1 ? weatherByDay : null
+  const startDateLabel = weather ? weather.date : date
+  const endDateLabel = tripDays ? tripDays[tripDays.length - 1].date : endDate
   const categoryEntries = Object.entries(recommendation.categories).filter(
-    ([category]) => activeTab === ALL_TAB || category === activeTab
+    ([category, { items }]) => (activeTab === ALL_TAB || category === activeTab) && items.length > 0
   )
   const { main: regionMain, detail: regionDetail } = splitRegionLabel(region)
 
@@ -191,126 +210,144 @@ export default function ResultView({ result, activeTab, onTabChange, language = 
             {regionDetail && <span className="weather-region-detail">{regionDetail}</span>}
           </span>
           <span className="weather-daterange">
-            {formatDateWithWeekday(weather.date, language)}
-            {tripDays ? ` ~ ${formatDateWithWeekday(tripDays[tripDays.length - 1].date, language)}` : ''}
+            {formatDateWithWeekday(startDateLabel, language)}
+            {endDateLabel && endDateLabel !== startDateLabel
+              ? ` ~ ${formatDateWithWeekday(endDateLabel, language)}`
+              : ''}
           </span>
         </div>
 
-        <div className="weather-top">
-          <div className="weather-main">
-            <div className="weather-main-icon">
-              <WeatherIcon condition={weather.condition} weatherCode={weather.weather_code} />
-            </div>
-            <div className="weather-main-info">
-              <p className="weather-temp">
-                {weather.temp_min}° ~ {weather.temp_max}°
-              </p>
-              <p className="weather-condition">{weather.condition}</p>
-            </div>
-          </div>
-
-          <div className="weather-stats">
-            <div className="weather-stat">
-              <span className="weather-stat-label">
-                <StatIcon type="umbrella" className="weather-stat-icon" /> {t.precipitation}
-              </span>
-              <span className="weather-stat-value">{weather.pop}%</span>
-            </div>
-            {weather.windspeed != null && (
-              <div className="weather-stat">
-                <span className="weather-stat-label">
-                  <StatIcon type="wind" className="weather-stat-icon" /> {t.windspeed}
-                </span>
-                <span className="weather-stat-value">{weather.windspeed}m/s</span>
-              </div>
-            )}
-            {weather.humidity != null && (
-              <div className="weather-stat">
-                <span className="weather-stat-label">
-                  <StatIcon type="drop" className="weather-stat-icon" /> {t.humidity}
-                </span>
-                <span className="weather-stat-value">{weather.humidity}%</span>
-              </div>
-            )}
-            {weather.travel_index && (
-              <div className="weather-stat">
-                <span className="weather-stat-label">
-                  <StatIcon type="smile" className="weather-stat-icon" /> {t.travelIndex}
-                </span>
-                <span className="weather-stat-value">{weather.travel_index}</span>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {recommendation.weather_desc && (
-          <div className="weather-summary-box">
-            <span className="weather-summary-icon">
-              <img src={aiSparkleIcon} alt="" />
-            </span>
-            <p className="weather-summary">
-              {recommendation.weather_desc}
-              <br />
-              {recommendation.spot_reason}
-            </p>
+        {isPreview && (
+          <div className="preview-badge">
+            <span className="preview-badge-dot" aria-hidden="true" />
+            {t.previewBadge}
           </div>
         )}
 
-        {tripDays && (
+        {weather ? (
           <>
-            <div className="daily-forecast">
-              {tripDays.map((day) => (
-                <div className="daily-forecast-item" key={day.date}>
-                  <p className="daily-forecast-date">{day.date}</p>
-                  <div className="daily-forecast-icon">
-                    <WeatherIcon condition={day.condition} weatherCode={day.weather_code} />
-                  </div>
-                  <p className="daily-forecast-condition">{day.condition}</p>
-                  <p className="daily-forecast-temp">
-                    <span className="daily-forecast-temp-range">
-                      {day.temp_min}° ~ {day.temp_max}°C
-                    </span>
-                    <span className="daily-forecast-temp-pop">{t.precipitation} {day.pop}%</span>
-                  </p>
+            <div className="weather-top">
+              <div className="weather-main">
+                <div className="weather-main-icon">
+                  <WeatherIcon condition={weather.condition} weatherCode={weather.weather_code} />
                 </div>
-              ))}
-            </div>
-            <p className="hint">{t.weatherForecastNote(weather.date)}</p>
-          </>
-        )}
+                <div className="weather-main-info">
+                  <p className="weather-temp">
+                    {weather.temp_min}° ~ {weather.temp_max}°
+                  </p>
+                  <p className="weather-condition">{weather.condition}</p>
+                </div>
+              </div>
 
-        {hourlyWeather && hourlyWeather.length > 0 && (
-          <div className="hourly-forecast-wrap">
-            <button
-              type="button"
-              className="hourly-forecast-toggle"
-              onClick={() => setShowHourly((prev) => !prev)}
-              aria-expanded={showHourly}
-            >
-              <span className="hourly-forecast-title">{t.hourlyForecastTitle}</span>
-              <svg
-                className={`hourly-forecast-toggle-icon${showHourly ? ' is-open' : ''}`}
-                viewBox="0 0 20 20"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            {showHourly && (
-              <div className="hourly-forecast">
-                {hourlyWeather.map((hour) => (
-                  <div className="hourly-forecast-item" key={hour.time}>
-                    <p className="hourly-forecast-time">{hour.time}</p>
-                    <div className="hourly-forecast-icon">
-                      <WeatherIcon condition={hour.condition} weatherCode={hour.weather_code} />
-                    </div>
-                    <p className="hourly-forecast-temp">{hour.temp}°</p>
-                    <p className="hourly-forecast-pop">{hour.pop}%</p>
+              <div className="weather-stats">
+                <div className="weather-stat">
+                  <span className="weather-stat-label">
+                    <StatIcon type="umbrella" className="weather-stat-icon" /> {t.precipitation}
+                  </span>
+                  <span className="weather-stat-value">{weather.pop}%</span>
+                </div>
+                {weather.windspeed != null && (
+                  <div className="weather-stat">
+                    <span className="weather-stat-label">
+                      <StatIcon type="wind" className="weather-stat-icon" /> {t.windspeed}
+                    </span>
+                    <span className="weather-stat-value">{weather.windspeed}m/s</span>
                   </div>
-                ))}
+                )}
+                {weather.humidity != null && (
+                  <div className="weather-stat">
+                    <span className="weather-stat-label">
+                      <StatIcon type="drop" className="weather-stat-icon" /> {t.humidity}
+                    </span>
+                    <span className="weather-stat-value">{weather.humidity}%</span>
+                  </div>
+                )}
+                {weather.travel_index && (
+                  <div className="weather-stat">
+                    <span className="weather-stat-label">
+                      <StatIcon type="smile" className="weather-stat-icon" /> {t.travelIndex}
+                    </span>
+                    <span className="weather-stat-value">{weather.travel_index}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {recommendation.weather_desc && (
+              <div className="weather-summary-box">
+                <span className="weather-summary-icon">
+                  <img src={aiSparkleIcon} alt="" />
+                </span>
+                <p className="weather-summary">
+                  {recommendation.weather_desc}
+                  <br />
+                  {recommendation.spot_reason}
+                </p>
               </div>
             )}
+
+            {tripDays && (
+              <>
+                <div className="daily-forecast">
+                  {tripDays.map((day) => (
+                    <div className="daily-forecast-item" key={day.date}>
+                      <p className="daily-forecast-date">{day.date}</p>
+                      <div className="daily-forecast-icon">
+                        <WeatherIcon condition={day.condition} weatherCode={day.weather_code} />
+                      </div>
+                      <p className="daily-forecast-condition">{day.condition}</p>
+                      <p className="daily-forecast-temp">
+                        <span className="daily-forecast-temp-range">
+                          {day.temp_min}° ~ {day.temp_max}°C
+                        </span>
+                        <span className="daily-forecast-temp-pop">{t.precipitation} {day.pop}%</span>
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="hint">{t.weatherForecastNote(weather.date)}</p>
+              </>
+            )}
+
+            {hourlyWeather && hourlyWeather.length > 0 && (
+              <div className="hourly-forecast-wrap">
+                <button
+                  type="button"
+                  className="hourly-forecast-toggle"
+                  onClick={() => setShowHourly((prev) => !prev)}
+                  aria-expanded={showHourly}
+                >
+                  <span className="hourly-forecast-title">{t.hourlyForecastTitle}</span>
+                  <svg
+                    className={`hourly-forecast-toggle-icon${showHourly ? ' is-open' : ''}`}
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {showHourly && (
+                  <div className="hourly-forecast">
+                    {hourlyWeather.map((hour) => (
+                      <div className="hourly-forecast-item" key={hour.time}>
+                        <p className="hourly-forecast-time">{hour.time}</p>
+                        <div className="hourly-forecast-icon">
+                          <WeatherIcon condition={hour.condition} weatherCode={hour.weather_code} />
+                        </div>
+                        <p className="hourly-forecast-temp">{hour.temp}°</p>
+                        <p className="hourly-forecast-pop">{hour.pop}%</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="weather-loading">
+            <span className="weather-loading-spinner" aria-hidden="true" />
+            <p>{t.weatherLoading}</p>
           </div>
         )}
       </section>

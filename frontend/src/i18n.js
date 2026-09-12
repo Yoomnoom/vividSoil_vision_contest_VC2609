@@ -51,6 +51,30 @@ export function getCategoryLabel(language, category) {
   return (CATEGORY_LABELS[language] || CATEGORY_LABELS.ko)[category] || category
 }
 
+const CONTENTS_TITLE_TEMPLATES = {
+  ko: (label) => `비짓서울이 소개하는 ${label} 명소`,
+  en: (label) => `${label} Spots from VisitSeoul`,
+  ja: (label) => `ビジットソウルが紹介する${label}スポット`,
+  zh: (label) => `VisitSeoul推荐的${label}地点`,
+}
+
+const CONTENTS_FETCH_ERROR_TEMPLATES = {
+  ko: (label) => `${label} 정보를 불러오지 못했습니다.`,
+  en: (label) => `Failed to load ${label.toLowerCase()} information.`,
+  ja: (label) => `${label}情報を取得できませんでした。`,
+  zh: (label) => `无法获取${label}信息。`,
+}
+
+export function getContentsTitle(language, category) {
+  const template = CONTENTS_TITLE_TEMPLATES[language] || CONTENTS_TITLE_TEMPLATES.ko
+  return template(getCategoryLabel(language, category))
+}
+
+export function getContentsFetchError(language, category) {
+  const template = CONTENTS_FETCH_ERROR_TEMPLATES[language] || CONTENTS_FETCH_ERROR_TEMPLATES.ko
+  return template(getCategoryLabel(language, category))
+}
+
 const WEEKDAYS = {
   ko: ['일', '월', '화', '수', '목', '금', '토'],
   en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -100,6 +124,10 @@ const STRINGS = {
     festivalsTitle: '지금 서울의 축제·행사',
     festivalMoreLink: '자세히 보기 ↗',
     festivalsFetchError: '행사 정보를 불러오지 못했습니다.',
+    shoppingContentsTitle: '비짓서울이 소개하는 쇼핑 명소',
+    shoppingContentsFetchError: '쇼핑 정보를 불러오지 못했습니다.',
+    weatherLoading: '날씨 정보를 불러오는 중…',
+    previewBadge: 'AI 맞춤 추천 준비 중 · 우선 서울의 인기 스팟을 보여드려요',
   },
   en: {
     appTitle: 'VividSoul',
@@ -138,6 +166,10 @@ const STRINGS = {
     festivalsTitle: "Seoul's Festivals & Events",
     festivalMoreLink: 'Learn more ↗',
     festivalsFetchError: 'Failed to load event information.',
+    shoppingContentsTitle: 'Shopping Spots from VisitSeoul',
+    shoppingContentsFetchError: 'Failed to load shopping information.',
+    weatherLoading: 'Loading weather…',
+    previewBadge: 'Preparing your AI picks · showing popular Seoul spots first',
   },
   ja: {
     appTitle: 'VividSoul',
@@ -176,6 +208,10 @@ const STRINGS = {
     festivalsTitle: 'ソウルの祭り・イベント',
     festivalMoreLink: '詳しく見る ↗',
     festivalsFetchError: 'イベント情報を取得できませんでした。',
+    shoppingContentsTitle: 'ビジットソウルが紹介するショッピングスポット',
+    shoppingContentsFetchError: 'ショッピング情報を取得できませんでした。',
+    weatherLoading: '天気情報を取得中…',
+    previewBadge: 'AIおすすめを準備中 · まずソウルの人気スポットを表示します',
   },
   zh: {
     appTitle: 'VividSoul',
@@ -214,6 +250,10 @@ const STRINGS = {
     festivalsTitle: '首尔的节庆活动',
     festivalMoreLink: '查看详情 ↗',
     festivalsFetchError: '无法获取活动信息。',
+    shoppingContentsTitle: 'VisitSeoul推荐的购物地点',
+    shoppingContentsFetchError: '无法获取购物信息。',
+    weatherLoading: '正在获取天气信息…',
+    previewBadge: 'AI推荐生成中 · 先为您展示首尔人气景点',
   },
 }
 

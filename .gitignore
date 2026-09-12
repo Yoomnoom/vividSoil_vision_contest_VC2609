@@ -17,3 +17,6 @@ frontend/dist/
 .claude/
 .vercel
 .env*
+
+# Local dev artifacts
+backend/backend_server.log

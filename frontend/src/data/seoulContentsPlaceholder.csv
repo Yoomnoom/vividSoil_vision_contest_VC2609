@@ -1,0 +1,404 @@
+keyword,lang,cid,district,post_sj,sumry,main_img
+문화관광,ko,KOPhaq0oj,종로구,2026 여유작 콘서트,가을 하늘 아래 푸르른 잔디밭에서 즐기는 우리 음악 나들이,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82111&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPx8qi2o,노원구,2026 타이틀 매치 《오인환 vs. 장서영: 휴먼 에러》,최첨단 기술 시대에 인간만이 할 수 있는 창작을 고민하고 인간의 불완전함에서 비롯되는 오류와 정상성에서의 이탈을 창조의 동력으로 삼은 두 작가의 작업,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82071&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPzmxljt,마포구,"자연을 사랑한 화가들 - 김원, 유영국, 이인성, 이중섭, 임직순 ","마포구 신공덕동(만리재옛길 28 1층)에 위치한 56.3평의 화이트큐브로 금성문화재단의 서화, 도자 소장품 전시를 주로 소개한다.  ",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81953&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPqkbvqx,중구,LALARECIPE × MeME : Happiness Recipe for Every Skin,"즐거운 레시피와 예술이 만나 완성하는 새로운 K-Beauty 경험.
+라라레서피와 MeME 작가의 협업을 통해 뷰티와 아트가 어우러진 감각적인 전시",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81946&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPh6s7u3,종로구,The Color of Memory 메모리의 색,"AI·반도체 시대, ‘예술적 메모리 소자’로서의 회화를 재정의하다.",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81943&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPoyf5m1,광진구,2026 서울시향 파크콘서트,"깊어가는 가을 밤, 울시향이 선사하는 웅장한 감동의 순간!
+비그림파워코리아와 함께하는 2026 서울시향 파크 콘서트",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81906&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPreqvti,강남구,2026 애채숲,각기 다른 예술의 형태들이 하나의 공간에서 만나 이루는 숲,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81903&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPii0mwl,성동구,섬유기획전 《안식의 결 Texture of Rest》	,"현대인에게 섬유의 고유한 물성인 '연결'과 '인내'를 매개로 흩어진 자아를 다시 '직조'하는 시간을 건네는 섬유기획전	
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81688&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPex1iie,용산구,파메서울,"복잡한 도심 위, 온전한 여유 속에서 휴식과 대화가 오가는 라운지",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81726&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ko,KOPzxk4rc,종로구,SKETCH 2026: 유동의 미학,금융과 예술이 교류하고 서로의 언어를 공유하는 새로운 만남의 장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81706&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPhaq0oj,종로구,2026 Yeoyujak Concert,"An outing with Korean traditional music on a green lawn under the autumn sky
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82111&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPlv5bpr,노원구,Gyeongchun Railway Bridge Music Fountain,"A nighttime music fountain over Jungnangcheon Stream, staged with lasers from a former Gyeongchun Line railway bridge
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82146&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPx8qi2o,노원구,2026 Title Match 《Oh Inhwan vs. Chang Seoyoung - Human Error》,"Work by two artists who ask what only humans can create in an age of advanced technology, and who turn error and departure from the norm, born of human imperfection, into a driving force for creation
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82071&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPreqvti,강남구,2026 AECHAE Forest,"A forest formed where different art forms meet in a single space
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81903&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPoyf5m1,광진구,SPO Park Concert 2026,"A deep autumn night and a moment of grand feeling from the Seoul Philharmonic Orchestra.
+2026 Seoul Philharmonic Orchestra Park Concert, presented with B.Grimm Power Korea",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81906&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPh6s7u3,종로구,The Color of Memory ,"Redefining painting as an 'artistic memory device' in the age of AI and semiconductors.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81943&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPqkbvqx,중구,LALARECIPE × MeME : Happiness Recipe for Every Skin,"A new K-Beauty experience made where a joyful recipe meets art.
+A collaboration between LALARECIPE and the artist MeME, bringing beauty and art together in one sensory exhibition",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81946&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPzmxljt,마포구,"Painters Inspired by Nature-Kim Won, Yoo Youngkuk, Lee In-sung, Lee Jung-seop, Yim Jik-soon","A white cube of about 186 m² in Singongdeok-dong, Mapo-gu (1F, 28 Mallijae-yetgil), showing mainly the Kumsung Cultural Foundation's collection of painting, calligraphy and ceramics.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81953&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENPex1iie,용산구,Pharme Seoul,"A lounge above the busy city, where rest and conversation unfold in complete ease
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81726&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,en,ENP2ts0gq,마포구,Hongdae Mural Street,"A street where you come across art by chance while walking through Hongdae
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81754&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPhaq0oj,종로구,2026 ヨユジャクコンサート,秋空の下、青々とした芝生で楽しむ韓国伝統音楽の野外コンサート,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82111&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPlv5bpr,노원구,キョンチュン(京春)鉄橋 音楽噴水,旧キョンチュン(京春)線の鉄橋でレーザーとともに繰り広げられるチュンナンチョン(中浪川)の夜間音楽噴水,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82146&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPx8qi2o,노원구,2026 タイトルマッチ《オ・インファン vs. チャン・ソヨン：ヒューマンエラー》,最先端技術の時代に人間だけができる創作を問い、人間の不完全さから生まれる誤りや正常性からの逸脱を創造の原動力とした二人の作家の作品,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82071&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPzmxljt,마포구,自然を愛した画家たち - キム・ウォン、ユ・ヨングク、イ・インソン、イ・ジュンソプ、イム・ジクスン,マポ(麻浦)区シンゴンドクドン(新孔徳洞)のマンリジェイェッキル28 1階にある56.3坪のホワイトキューブで、クムソン文化財団の書画・陶磁の所蔵品展示を中心に紹介する,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81953&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPqkbvqx,중구,LALARECIPE × MeME : Happiness Recipe for Every Skin,楽しいレシピとアートが出会って完成する、新しいK-Beauty体験。ララレシピとMeME作家のコラボレーションによる、ビューティーとアートが融合した感覚的な展示,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81946&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPh6s7u3,종로구,The Color of Memory メモリの色,AI・半導体の時代、「芸術的メモリ素子」としての絵画を再定義する。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81943&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPoyf5m1,광진구,2026 ソウル市立交響楽団パークコンサート,深まる秋の夜、ソウル市立交響楽団が贈る壮大な感動のひととき！B.Grimm Power Koreaとともにお届けする2026 ソウル市立交響楽団パークコンサート,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81906&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPreqvti,강남구,2026 エチェスプ(エチェの森),それぞれ異なる芸術の形が一つの空間で出会って生まれる森,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81903&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPPii0mwl,성동구,繊維企画展《安らぎの肌ざわり Texture of Rest》,"現代人に、繊維固有の物性である「つながり」と「忍耐」を介して、散らばった自我を再び「織り上げる」時間を贈る繊維企画展
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81688&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,ja,JPP2ts0gq,마포구,ホンデ(弘大)壁画通り,ホンデ(弘大)の街を歩きながら、ふとアートに出会えるウォールアートストリート,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81754&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPhaq0oj,종로구,2026 悠然小聚音乐会 (Yeoyujak Concert),在秋日晴空下的绿茵草坪上享受的韩国传统音乐之旅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82111&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPlv5bpr,노원구,京春铁桥音乐喷泉,在旧京春线铁桥上伴随激光上演的中浪川夜间音乐喷泉,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82146&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPx8qi2o,노원구,2026冠军对决展《吴仁焕vs.张书英：人类谬误》,两位艺术家在尖端技术时代思考唯有人类才能实现的创作，并将源自人类不完美的谬误与对常态的偏离化为创造动力的作品,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82071&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPzmxljt,마포구,热爱自然的画家们——金原、刘永国、李仁星、李仲燮、任直淳,位于麻浦区新孔德洞（万里岾旧路28 1楼）、面积56.3坪的白盒子空间，主要介绍金星文化财团的书画、陶瓷藏品展,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81953&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPqkbvqx,중구,LALARECIPE × MeME : Happiness Recipe for Every Skin,愉悦配方与艺术交融，打造全新韩系美妆体验。通过LALARECIPE与艺术家MeME的合作，呈现美妆与艺术交融的感官展览,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81946&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPh6s7u3,종로구,The Color of Memory 记忆之色,AI与半导体时代，重新定义作为“艺术记忆元件”的绘画,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81943&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPoyf5m1,광진구,2026首尔市立交响乐团公园音乐会,深秋之夜，首尔市立交响乐团带来的宏大感动瞬间！与B.Grimm Power Korea携手呈现的2026首尔市立交响乐团公园音乐会,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81906&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPreqvti,강남구,2026 AECHAE林,各式各样的艺术形态在同一空间相聚而成的森林,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81903&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNPii0mwl,성동구,纤维企划展《安歇之结（Texture of Rest)》,"这是一场纤维企划展，借由纤维固有的物性“联结”与“隐忍”，为人们提供一段重新“编织”破碎自我的时光
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81688&fileTy=MEDIA&fileNo=1&thumbTy=M
+문화관광,zh,CNP2ts0gq,마포구,弘大壁画街,漫步弘大街头，不经意间就能与艺术不期而遇的街巷,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81754&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOP0c1dl9,성동구,신라면분식 더 팩토리,신라면 40주년을 맞아 성수동에 문을 연 라면 팝업 스토어,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82175&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPbop9e1,종로구,북촌웰니스뮤지엄약국,"북촌 계동길에서 약과 뷰티, 건강 관리를 한자리에서 만나는 2층 규모 웰니스 약국",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82169&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPziwp2z,용산구,메디킹덤 약국,"용산 전자상가의 새로운 중심, 국내 최대 800평 규모를 자랑하는 대형 약국",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81748&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPnew3no,강동구,다이소 이스턴스퀘어 강동천호점,복합 쇼핑몰 강동 이스턴스퀘어에 위치한 서울 최대 규모 수준의 다이소 매장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81737&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOP3o3i2c,성동구,젠틀몬스터 하우스 노웨어 서울,젠틀몬스트가 만든 미래형 리테일 공간,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81731&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPw8jvg2,서초구,모던하우스 뉴컨셉스토어 뉴코아강남점,다양한 주거공간과 글로벌 리빙 제품을 직접 경험할 수 있는 체험형 라이프스타일 매장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81848&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOP8ymdnz,강남구,서울마이소울 강남점,서울의 감성과 문화를 담은 다양한 공식 굿즈를 만나볼 수 있는 기념품 매장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81809&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOP19pl3n,성동구,무신사 킥스 성수,다양한 브랜드의 신발을 직접 신어 보고 스마트하게 비교·구매할 수 있는 성수동 슈즈 전문 편집숍,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81365&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPmwrtiq,성동구,뉴뉴하우스 성수역점,패션·리빙·선물용 소품을 합리적인 가격에 만날 수 있는 키치한 감성의 라이프스타일 숍,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81359&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ko,KOPkptqaw,용산구,치이카와샵 아이파크몰 용산점,인기 치이카와 캐릭터의 공식 굿즈를 만나고 즐길 수 있는 캐릭터 전문 매장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81353&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPbop9e1,종로구,Bukchon Wellness Museum Pharmacy,"A two-floor wellness pharmacy on Gyedong-gil in Bukchon, bringing medicine, beauty and health care together
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82169&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENP0c1dl9,성동구,Shin Ramyun Bunsik The Factory,"A ramyun pop-up store in Seongsu-dong marking the 40th anniversary of Shin Ramyun
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82175&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENP3o3i2c,성동구,GENTLE MONSTER HAUS NOWHERE SEOUL,"A future-facing retail space created by GENTLE MONSTER
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81731&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPnew3no,강동구,DAISO Eastern Square Gangdong Cheonho,"A Daiso store boasting one of the largest scales in Seoul, located in the Eastern Square Gangdong shopping mall.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81737&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPziwp2z,용산구,MEDIKINGDOM Pharmacy,"A new center of the Yongsan electronics market and Korea's largest pharmacy, at about 2,600㎡ (800 pyeong)
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81748&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPw8jvg2,서초구,Modern House New Concept Store New Core Gangnam Branch,"An interactive lifestyle store where you can directly experience various residential spaces and global living products.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81848&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENP8ymdnz,강남구,Seoul My Soul Shop Gangnam Branch,"A souvenir shop where you can encounter various official goods embodying the sensibility and culture of Seoul.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81809&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENP19pl3n,성동구,Musinsa Kicks Seongsu,A shoe-specialized select shop in Seongsu-dong where you can directly try on various brands of shoes and smartly compare and purchase them,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81365&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPmwrtiq,성동구,NYUNYU HOUSE Seongsu Station Branch,"A lifestyle shop with a kitschy sensibility where you can find fashion, living, and gift accessories at reasonable prices.",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81359&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,en,ENPkptqaw,용산구,Chiikawa Shop I'Park Mall Yongsan Branch,A specialized character store where you can encounter and enjoy official goods of the popular character Chiikawa,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81353&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPP0c1dl9,성동구,辛ラーメン粉食 ザ・ファクトリー,辛ラーメン40周年を記念してソンスドン(聖水洞)にオープンしたラーメンのポップアップストア,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82175&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPbop9e1,종로구,プクチョン(北村)ウェルネスミュージアム薬局,プクチョン(北村)のケドンギルで、薬とビューティー、健康管理を一か所でそろえられる2階建てのウェルネス薬局,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82169&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPziwp2z,용산구,メディキングダム薬局,ヨンサン(龍山)電子商店街の新たな中心、韓国最大級の800坪の規模を誇る大型薬局,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81748&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPnew3no,강동구,ダイソー イースタンスクエア カンドンチョンホ(江東千戸)店,複合ショッピングモール カンドン(江東)イースタンスクエア内に位置するソウル最大級規模のダイソー店舗,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81737&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPP3o3i2c,성동구,ジェントルモンスター ハウス ノーウェア ソウル(HAUS NOWHERE SEOUL),ジェントルモンスターが提案する未来型リテール空間,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81731&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPw8jvg2,서초구,モダンハウス ニューコンセプトストア ニューコア　カンナム(江南)店,多様な住空間とグローバルリビング商品を直接体験できる体験型ライフスタイルショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81848&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPP8ymdnz,강남구,SEOUL MY SOUL カンナム駅店,ソウルの感性と文化が詰まった多彩な公式グッズを取り揃えたお土産ショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81809&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPP19pl3n,성동구,MUSINSA KICKS ソンス(聖水),多様なブランドのシューズを実際に試着し、スマートに比較・購入できるソンスドン(聖水洞)のシューズ専門セレクトショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81365&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPmwrtiq,성동구,ニュニュハウス ソンス駅店,ファッション・リビング・ギフト雑貨をリーズナブルな価格で買える、キッチュなセンスあふれるライフスタイルショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81359&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,ja,JPPkptqaw,용산구,ちいかわショップ アイパークモール ヨンサン(龍山)店,大人気キャラクター「ちいかわ」の公式グッズに出会えるキャラクター専門ショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81353&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNP0c1dl9,성동구,辛拉面面食 The Factory,为纪念辛拉面40周年而在圣水洞开设的方便面快闪店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82175&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPbop9e1,종로구,北村健康博物馆药店,在北村桂洞街将药品、美妆与健康管理集于一处的两层健康药店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82169&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPziwp2z,용산구,MEDIKING药店,龙山电子商业街新地标，韩国国内规模最大、面积达800坪的大型药店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81748&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPnew3no,강동구,大创EASTERN SQUARE江东千户店,大创卖场坐落于江东EASTERN SQUARE，是首尔规模最大的门店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81737&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNP3o3i2c,성동구,GENTLE MONSTER HAUS NOWHERE SEOUL,GENTLE MONSTER打造的未来感零售空间,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81731&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPw8jvg2,서초구,MODERN HOUSE新概念门店NEW CORE江南店,可以亲身体验多样居住空间和全球家居产品的生活方式家居卖场,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81848&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNP8ymdnz,강남구,Seoul My Soul江南店,可以选购承载首尔情怀和文化的各类官方周边的纪念品商店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81809&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNP19pl3n,성동구,MUSINSA KICKS圣水店,这是圣水洞鞋类专业集合店，店内汇集多个品牌鞋款，可上脚试穿，轻松对比挑选、理智选购,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81365&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPmwrtiq,성동구,NYUNYU HOUSE圣水站店,一家充满俏皮治愈氛围的生活方式集合店，平价高性价比选购服饰、家居好物、礼品小配饰,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81359&fileTy=MEDIA&fileNo=1&thumbTy=M
+쇼핑,zh,CNPkptqaw,용산구,吉伊卡哇卖场I Park购物中心龙山店,可选购、体验人气卡通IP吉伊卡哇官方周边的卡通形象专门店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81353&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOPvmf745,중구,리재 서울,한양도성이 집 앞에 펼쳐진 곳에 위치한 단독 주택 숙소,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79688&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOP54ay57,노원구,수락휴 트리하우스,전국 최초 도심형 자연휴양림,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74819&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOPrb2d9e,종로구,스테이 다반사,"아담한 정원과 하늘을 보며 노천을 즐기고, 직접 우린 차를 마시며 독서하기 좋은곳",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68575&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOPx17ry7,성동구,호텔 포코 성수,"호텔 포코 성수는  빠르고 복잡한 도심 속에서 도심 속 아지트를 지향하는 라이프스타일 호텔입니다. 성수역 3번출구에서 도보 2분 거리에 위치하며, 서울숲과의 접근성이 뛰어나 ‘도심 속 숲캉스’를 만끽할 수 있습니다. ",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=61085&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOP9dsjmt,강남구,안다즈 서울강남,강남의 중심에서 모던한 감각으로 지역의 문화와 감성을 선보이는 럭셔리 라이프스타일 호텔,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=59991&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ko,KOP042851,종로구,노스텔지어 블루재,북촌 한옥마을에 자리잡은 고귀한 푸른 한옥,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42851&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ko,KOP042850,종로구,누와,"서촌의 주택가 좁은 골목 깊은 곳의 작은 한옥, 누와",https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42850&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ko,KOP042849,은평구,응정헌,자연을 즐기는 한옥호텔,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42849&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ko,KOP024551,강남구,호텔 카푸치노,강남에 있는 애견동반 가능 호텔,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=24551&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ko,KOP024498,중구,영빈관(신라호텔),"신라호텔 마당에 위치해 있는, 만찬과 결혼식, 이벤트용으로 쓰이는 독특한 공간",https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=24498&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,en,ENPvmf745,중구,Leejae Seoul,"A detached house accommodation located where the Seoul City Wall unfolds right in front of the house.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79688&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,en,ENP54ay57,노원구,Surak Hyu Treehouse,"The nation's first urban-style forest retreat
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74819&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,en,ENPrb2d9e,종로구,Stay Davansa,"A perfect spot to enjoy an open-air bath while gazing at the sky and a cozy garden, sipping freshly brewed tea, and reading in peace",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68575&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,en,ENPx17ry7,성동구,Hotel Poco Seongsu,"Hotel Poco Seongsu is a lifestyle hotel that aims to provide a safe haven in the fast-paced and bustling city center. Located just a 2-minute walk from Exit 3 of Seongsu Station, it offers excellent a",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=61085&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,en,ENP9dsjmt,강남구,Andaz Seoul Gangnam,A luxurious lifestyle hotel that showcases the local culture and sensibilities of the area with a modern touch in the heart of Gangnam.,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=59991&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,en,ENP042851,종로구,Nostalgia Bluejae,A noble and blue hanok nestled in Bukchon Hanok Village,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42860&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,en,ENP042850,종로구,Nuwa,"Nuwa, a small hanok deep in the narrow alleys of Seochon's residential area",https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42856&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,en,ENP042849,은평구,Eungjeongheon,Enjoying nature in a hanok hotel,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42852&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,en,ENP039311,동대문구,Mangrove Sinseol,Through the renovation of a hotel comes the newest co-living house.,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=39337&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,en,ENP028037,광진구,Vista Walkerhill Seoul,"Located in Achasan, Gwangjin-gu, Vista Walkerhill Seoul is the best place to soak in a hot tub while viewing the wonderful scenery of the Hangang River.",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=78250&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPPvmf745,중구,リジェソウル,ハニャン(漢陽)都城が目の前に広がる、一戸建て宿泊施設,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79688&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPP54ay57,노원구,スラクヒュツリーハウス,全国初の都心型自然休養林,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74819&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPPrb2d9e,종로구,Stay Davansa,小さな庭と空を眺めながらお風呂を満喫でき、自分で淹れたお茶を飲みながら読書をするのにぴったりの場所。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68575&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPPx17ry7,성동구,HOTEL POCO ソンス(聖水),HOTEL POCO ソンス(聖水)は、目まぐるしく都心の中のアジトを目指すライフスタイルホテルです。「ソンス」駅3番出口から徒歩2分の距離に位置し、ソウルの森へのアクセスに優れ、「都心の中の森のバカンス」を満喫することができます。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=61085&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPP9dsjmt,강남구,Andaz Seoul Gangnam,カンナム(江南)の地域の文化と感性をモダンなデザインでお届けするラグジュアリーライフスタイルホテル。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=59991&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPP042851,종로구,ノステルジア ブルージェ(Blue斎),プクチョン(北村)に位置するラグジュアリーな青い韓屋,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42861&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ja,JPP042850,종로구,ヌワ(nuwa),ソチョンの住宅街の路地裏にある小さい韓屋、ヌワ(nuwa),https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42857&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ja,JPP042849,은평구,ウンジョンホン(応鄭軒),大自然の景色を楽しめる韓屋ホテル,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42853&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,ja,JPP031984,은평구,チェイル(第一)市場,1970年にオープンしたチェイル(第一)市場は衣類、生活用品、総菜、食品などを販売している70以上の店舗が入っています。 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77842&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,ja,JPP024551,강남구,ホテルカプチーノ,ソウルのダイナミックな南の副都心・カンナム(江南)エリアにあるホテルカプチーノは、新しく、落ち着け、ユニークで、確かな理由のあるホテルを探している外国人観光客やソウル市民のためのもうひとつの家です。,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=24553&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,zh,CNPvmf745,중구,利斋首尔,坐拥汉阳都城景致的独栋民宿，推开门即是古城风光。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79688&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,zh,CNP54ay57,노원구,水落休树屋,韩国首个城市中心型自然休养林。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74819&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,zh,CNPrb2d9e,종로구,STAY DAVANSA,小巧的庭院，抬头可见广阔的天空享受露天时光也是亲自泡茶、静心阅读的好去处。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68575&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,zh,CNPx17ry7,성동구,Hotel Poco 圣水,Hotel Poco 圣水是想成为节奏快、复杂的市中心秘密基地的生活方式酒店。位于圣水站3号出口步行2分钟的距离，离首尔林距离很近，尽情享受“市中心的绿意假日”。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=61085&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,zh,CNP9dsjmt,강남구,Andaz 首尔江南,江南的中心以现代感的设计，展现了地域文化和氛围的奢华生活型酒店。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=59991&fileTy=MEDIA&fileNo=1&thumbTy=M
+숙박,zh,CNP042851,종로구,Nostalgia Bluejae,北村韩屋村的高贵蓝色砖瓦韩屋,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42862&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,zh,CNP042850,종로구,Nuwa,西村住宅区狭窄的胡同深处的小韩屋，Nuwa,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42858&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,zh,CNP042849,은평구,Eungjeongheon,享受自然的韩屋酒店,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=42854&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,zh,CNP024551,강남구,卡布奇诺酒店,卡布奇诺酒店是每天都会传递新消息与灵感的城市型生活风格住宿设施，欢迎来自世界各地的游客们到访卡布奇诺酒店。,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=24554&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+숙박,zh,CNP024498,중구,迎宾馆(新罗酒店),迎宾馆位于新罗酒店院里，是举办晚宴与各种活动的特色空间，迎宾馆是传统韩屋样式的2层设施。,https://api.visitseoul.net/comm/getImage?srvcId=POST&parentSn=24501&fileTy=POSTTHUMB&fileNo=1&thumbTy=M&postTy=P
+역사관광,ko,KOP92zc2g,성북구,서울 흥천사,"조선을 건국한 태조 이성계가 신덕왕후의 명복을 기원하기 위해 1396년 창건한 왕실 사찰로, 600여 년의 역사를 간직한 서울의 대표적인 전통사찰",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81274&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ko,KOPw9eym0,동작구,달마사,서달산이 감싸고 있는 동작구 지역 유일의 전통사찰,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80205&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ko,KOPnje8ve,종로구,경교장,"대한민국 임시정부의 마지막 청사이자 백범 김구가 서거한 역사적 현장, 경교장",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79944&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ko,KOPv4bofj,종로구,감사의 정원,감사의 정원은 6 ·25 전쟁 참전용사에 대한 감사와 대한민국의 성과와 번영을 되새기는 공간,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79923&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ko,KOP0wav1s,종로구,종묘돌담길,종묘 서쪽 담장을 따라 길게 뻗은 고즈넉한 돌담길,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68939&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ko,KOPfk9nxi,종로구,경복궁 집옥재,경복궁 건청궁 서쪽에 위치한 전각으로 고종의 서재,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67948&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ko,KOPldz98j,종로구,경복궁 돌담길 ,경복궁을 둘러싸고 있는 돌담길 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67938&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ko,KOPl8f5md,종로구,창덕궁 후원 ,창덕궁 내부에 위치한 조선 시대 궁궐의 정원 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67915&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ko,KOPexzzw3,종로구,석굴암,"인왕산 중턱, 치마바위 아래쪽에 자리해있는 석굴암",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67172&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ko,KOPkxi16h,성북구,경국사 ,성북구 정릉동 삼각산(북한산) 동쪽 기슭에 있는 절,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67111&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENP92zc2g,성북구,Seoul Heungcheonsa Temple,"A representative traditional temple in Seoul with over 600 years of history, founded in 1396 as a royal temple by King Taejo (Yi Seong-gye) to pray for the peaceful rest of Queen Sindeok.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81274&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENPw9eym0,동작구,Dalmasa Temple,"The only traditional temple in the Dongjak-gu area, enveloped by Seodalsan Mountain.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80205&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENPnje8ve,종로구,Gyeonggyojang,"The final headquarters of the Provisional Government of the Republic of Korea and the momentous historical site of the assassination of Baekbum Kim Gu.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79944&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENPv4bofj,종로구,Garden of Gratitude,"A space to reflect upon the gratitude toward Korean War veterans, as well as the achievements and prosperity of the Republic of Korea.",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79923&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENP0wav1s,종로구,Jongmyo Shrine Stonewall Path ,A serene stone wall path stretches along the west wall of Jongmyo Shrine,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68939&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,en,ENPfk9nxi,종로구,Gyeongbokgung Palace Jibokjae,"A pavilion located to the west of Geoncheonggung in Gyeongbokgung Palace, used as King Gojong's study",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67948&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENPldz98j,종로구,Gyeongbokgung Stonewall Walkway ,The stonewall path surrounding Gyeongbokgung Palace ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67938&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,en,ENPl8f5md,종로구,Changdeokgung Secret Garden ,A garden of a Joseon Dynasty located inside Changdeokgung Palace ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67915&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,en,ENPkxi16h,성북구,Kyungguksa,"A temple located on the eastern foothills of Samgaksan (Bukhansan) in Jeongneung-dong, Seongbuk-gu",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67111&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,en,ENPexzzw3,종로구,Seokguram,"Seokguram Grotto is nestled halfway up Inwangsan Mountain, just below Chimabawi Rock, and can be reached via the Inwangsan Mountain Trail.",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67172&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ja,JPP92zc2g,성북구,ソウル フンチョンサ(興天寺),"朝鮮を建国した太祖イ・ソンゲ(李成桂)がシンドク(神徳)王后の冥福を祈るために1396年に創建した王室ゆかりの寺院であり、600年以上の歴史を刻んできたソウルを代表する伝統寺院
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81274&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ja,JPPw9eym0,동작구,ダルマサ(達磨寺),ソダルサン(西達山)に囲まれたトンジャク(銅雀)区地域唯一の伝統寺院,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80205&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ja,JPPnje8ve,종로구,キョンギョジャン(京橋荘),大韓民国臨時政府の最後の庁舎であり、ペクポム(白凡)キム・グ(金九)が逝去した歴史的な現場、キョンギョジャン(京橋荘),https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79944&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ja,JPP0wav1s,종로구,チョンミョ(宗廟)トルダムギル(石垣道),チョンミョ(宗廟)の西側の塀に沿って長く続く、静かな石垣道。 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68939&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ja,JPPfk9nxi,종로구,キョンボックン(景福宮) チプオクジェ(集玉斎),キョンボックン(景福宮)の内部にあり、コンチョングン(乾清宮)の西側に位置する殿閣で、 朝鮮王朝第26代国王・コジョン(高宗)の書斎として利用されていました。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67948&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ja,JPPldz98j,종로구,キョンボックン(景福宮) トルダムギル(石垣道) ,キョンボックン(景福宮)を囲む石垣道 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67938&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ja,JPPl8f5md,종로구,チャンドッグン(昌徳宮) 後苑 ,チャンドッグン(昌徳宮)の内部に位置する、朝鮮王朝時代の宮廷の庭園 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67915&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ja,JPPexzzw3,종로구,ソックラム(石窟庵),イヌァンサン(仁王山)の中腹、チマバウィ(スカート岩)の下に位置するソックラム(石窟庵),https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67172&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,ja,JPPkxi16h,성북구,キョングクサ(慶國寺) ,ソンブク(城北)区チョンヌン洞に位置する三角山(北漢山)の東側のふもとにある寺,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67111&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,ja,JPPjkm9y3,중구,新亜紀念館,「新亜日報」が強制的に廃刊された後、創業者のチャン·ギボンと「新亜日報」を記憶するための紀念館として使用されている場所,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=66422&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,zh,CNP92zc2g,성북구,首尔兴天寺,"这里是朝鲜开国君主太祖李成桂为祈愿神德王后冥福，于1396年修建的王室寺院，是拥有600余年历史、首尔代表性传统寺庙
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81274&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,zh,CNPw9eym0,동작구,达磨寺,坐落于西达山环抱之中的铜雀区唯一传统寺庙,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80205&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,zh,CNPnje8ve,종로구,京桥庄,京桥庄是大韩民国临时政府最后一处办公旧址，也是白凡金九先生逝世的历史遗址,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79944&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,zh,CNP0wav1s,종로구,宗庙石墙路,一条沿着宗庙西墙延伸的寂静的石墙路,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=68939&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,zh,CNPfk9nxi,종로구,景福宫集玉斋,位于景福宫乾清宫西侧的殿阁，曾作为高宗的书房。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67948&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,zh,CNPldz98j,종로구,景福宫石墙路 ,环绕景福宫的石墙路 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67938&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,zh,CNPl8f5md,종로구,昌德宫后苑 ,位于昌德宫内部朝鲜时代宫殿的庭院 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67915&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,zh,CNPexzzw3,종로구,石窟庵,位于仁王山半山腰、裙岩下面的石窟庵,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67172&fileTy=MEDIA&fileNo=2&thumbTy=M
+역사관광,zh,CNPkxi16h,성북구,庆国寺,位于城北区贞陵洞三角山（北汉山）东侧山麓的寺庙 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=67111&fileTy=MEDIA&fileNo=1&thumbTy=M
+역사관광,zh,CNPjkm9y3,중구,新亚纪念馆,《新亚日报》被强制停刊后，为纪念创办人张基凤和《新亚日报》而使用的纪念馆。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=66422&fileTy=MEDIA&fileNo=2&thumbTy=M
+음식,ko,KOPf7xg5g,종로구,스쿠퍼젤라또 경복궁점,서촌 자하문로 골목에서 만나는 이탈리아식 젤라또와 아포가토,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82163&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOP26wpqv,노원구,카페 포레스트,불암산 자락 화원 옆에서 숲 전망을 마주하는 노원구 산속 카페,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82157&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPrr2u80,강북구,소귀골백운산장,북한산 우이동 계곡을 곁에 두고 능이백숙과 갈비찜을 내는 산장 식당,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82152&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPuky86s,중구,제이드앤워터 서울역점,  서울역에서 5분! 브런치부터 야경 한잔까지 모두 즐길 수 있는 브런치&패밀리레스토랑 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82054&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPituzq5,성동구,제이드앤워터 옥수,"2020년, 옥수동에 조용히 자리잡은 곳. 연예인들도 남몰래 찾는다는 그 브런치 맛집",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82060&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPrfaiye,용산구,tebie(테비),"일본식 중화요리 스타일로 부담 없이 즐길 수 있는 맛, 오래 머물고 싶은 공간",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81937&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOP3u33j2,용산구,뉴오더클럽 한남 / NEW ORDER CLUB HANNAM,한강진역과 이태원 사이에 위치한 뉴욕 스타일 피자 전문점입니다. 72시간 저온 숙성 도우와 하프앤하프 피자를 중심으로 피자와 맥주를 함께 즐길 수 있습니다.,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81931&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPhuefly,성동구,제이드앤워터 성수 LCDC점,넷플릭스 <흑백요리사> TOP 5 셰프 윤남노가 직접 방문해 극찬한 브런치&패밀리 레스토랑,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81915&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPl3xyt0,종로구,깊픈(GIPPEN),향토음식인 엉겅퀴 해장국과 특별한 숯불 요리를 함께 즐길 수 있는 음식점,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81910&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ko,KOPmagegz,종로구,능라도 광화문점	,"최고 품질의  1++ 암소한우 불고기 요리와 매일 자가제면한 메밀면, 1++ 한우 육수로 깊고 담백한 맛을 선보입니다. 점심과 저녁 모임에도 좋은 광화문역 맛집 능라도 광화문점	
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81783&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPrr2u80,강북구,Sogwigol Baegunsanjang,"A mountain lodge restaurant beside the Uidong valley in Bukhansan, serving neungi mushroom baeksuk and braised short ribs
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82152&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENP26wpqv,노원구,Cafe Forest,"A cafe on the slopes of Bulamsan in Nowon-gu, set beside a flower nursery and facing the forest
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82157&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPf7xg5g,종로구,Scooper Gelato Gyeongbokgung branch,"Italian-style gelato and affogato in a Seochon alley west of Gyeongbokgung Palace
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82163&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPuky86s,중구,Jade and Water Seoul Station branch,"Five minutes from Seoul Station! A brunch and family restaurant for everything from brunch to a drink with a night view
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82054&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPituzq5,성동구,Jade and Water Oksu branch,"Opened quietly in Oksu-dong in 2020.
+The brunch spot celebrities are said to slip into unnoticed",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82060&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPl3xyt0,종로구,GIPPEN,"A restaurant where thistle haejangguk, a regional Korean specialty, is served alongside distinctive charcoal-grilled dishes
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81910&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPhuefly,성동구,Jade and Water Seongsu LCDC Branch,"A brunch and family restaurant praised by Yun Nam-no, a Top 5 chef on Netflix's Culinary Class Wars, after a visit of his own
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81915&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENP3u33j2,용산구, NEW ORDER CLUB HANNAM,"A New York-style pizzeria between Hangangjin Station and Itaewon. Built around 72-hour cold-fermented dough and half-and-half pizzas, it is a place to have pizza with a beer.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81931&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPrfaiye,용산구,tebie,"Japanese-style Chinese cooking that is easy to enjoy, in a room you will want to linger in.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81937&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,en,ENPkguc3l,용산구,madameal,"A brunch restaurant serving dishes made with the seasonal ingredients you have to try
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81709&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPf7xg5g,종로구,スクーパージェラート キョンボックン(景福宮)店,ソチョン(西村)のジャハムンロ(紫霞門路)の路地で味わうイタリア式ジェラートとアフォガート,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82163&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPP26wpqv,노원구,カフェ・フォレスト(Cafe Forest),プラムサン(仏岩山)のふもと、花園の隣で森の眺めと向かい合うノウォン(蘆原)区の山あいのカフェ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82157&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPrr2u80,강북구,ソグィゴルベグン(白雲)山荘,プカンサン(北漢山)ウイドン(牛耳洞)渓谷のそばで、コウタケ入りの水炊きとカルビの蒸し煮を味わえる山荘レストラン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82152&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPuky86s,중구,ジェイド＆ウォーター ソウル駅店,ソウル駅から5分！ブランチから夜景を眺めての一杯まで楽しめるブランチ＆ファミリーレストラン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82054&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPituzq5,성동구,ジェイド＆ウォーター オクス(玉水)店,2020年、オクスドン(玉水洞)にひっそりと構えた一軒。芸能人もお忍びで訪れるという、あのブランチの名店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82060&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPrfaiye,용산구,テビ(tebie),日本式中華料理のスタイルで気軽に楽しめる味わいと、長く過ごしたくなる空間を目指しています,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81937&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPP3u33j2,용산구,ニューオーダークラブハンナム(漢南) / NEW ORDER CLUB HANNAM,ハンガンジン駅とイテウォン(梨泰院)の間に位置するニューヨークスタイルのピザ専門店です。72時間低温熟成の生地とハーフ＆ハーフピザを中心に、ピザとビールを一緒に楽しめます。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81931&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPhuefly,성동구,ジェイド＆ウォーター ソンス(聖水)LCDC店,Netflix<白と黒のスプーン ～料理階級戦争～>トップ5シェフのユン・ナムノが実際に来店し絶賛したブランチ＆ファミリーレストラン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81915&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPl3xyt0,종로구,キップン(GIPPEN),郷土料理のアザミのヘジャンククと、こだわりの炭火料理を一緒に楽しめるレストラン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81910&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,ja,JPPmagegz,종로구,ヌンラド クァンファムン(光化門)店,"最高品質の1++等級の牝韓牛のプルコギ料理と、毎日店内で打つ蕎麦、1++韓牛の出汁で深くあっさりとした味わいをお届けします。昼食や夕食の集まりにも適したクァンファムン(世宗文化会館)駅の美味しい店、ヌンラドクァンファムン(光化門)店
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81783&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPf7xg5g,종로구,SCOOPER意式冰淇淋 景福宫店,在西村紫霞门路小巷里品尝的意式冰淇淋与阿芙佳朵,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82163&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNP26wpqv,노원구,Cafe Forest,位于芦原区佛岩山山脚、紧邻花园并正对森林景致的山中咖啡馆,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82157&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPrr2u80,강북구,小櫷谷白云山庄,紧邻北汉山牛耳洞溪谷，供应虎掌菇清炖汤与炖排骨的山庄餐厅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82152&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPuky86s,중구,Jade and Water 首尔站店,距首尔站5分钟！从早午餐到伴着夜景小酌，一应俱全的早午餐&家庭餐厅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82054&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPituzq5,성동구,JADE&WATER 玉水店,2020年在玉水洞悄然落脚的一家店。据说连明星都会低调造访的那家早午餐名店,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82060&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPrfaiye,용산구,Tebie,以日式中华料理的风格，追求让人轻松享用的味道与想要久留的空间,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81937&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNP3u33j2,용산구,NEW ORDER CLUB HANNAM,位于汉江镇站与梨泰院之间的纽约风格披萨专门店。以72小时低温发酵面团和双拼披萨为主，可搭配啤酒一同享用,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81931&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPhuefly,성동구,Jade and Water 圣水LCDC店,网飞《黑白厨师》前五强厨师尹男老亲自到访并大加赞赏的早午餐&家庭餐厅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81915&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPl3xyt0,종로구,GIPPEN,可以同时品尝乡土美食蓟花解酒汤与特色炭火料理的餐厅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81910&fileTy=MEDIA&fileNo=1&thumbTy=M
+음식,zh,CNPmagegz,종로구,绫罗岛光化门店,"绫罗岛光化门店采用顶级品质1++级韩牛制作烤肉，搭配每日自制的荞麦面，加以1++级高牛高汤汤底，呈现醇厚清爽的风味，是一家适合午晚餐聚餐的光化门站美食店。 
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81783&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPylc4hg,노원구,초안산수국동산,"약 1만 그루의 다채로운 수국과 산책로, 생태연못이 어우러진 도심 속 생태정원",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81842&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPtte3ed,양천구,용왕산 스카이워크,숲 위를 걸으며 도심과 한강을 한눈에 조망할 수 있는 곳,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81571&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOP3pm9nc,강북구,북한산 체험형 숲속쉼터,도심 속 휴양·치유 공간으로 조성된 강북구를 대표하는 로컬 명소,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81563&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPtr2tsi,동작구,서달산,현충원을 품고 있는 산으로 초보 등산 코스로 추천,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80200&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPyia5so,서대문구,연희숲속쉼터,도심 속 자연의 아름다움을 느낄 수 있는 서대문구에 위치한 쉼터 공간,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79082&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOP0aa7qh,성동구,송정제방길,사계절이 아름다운 중랑천변에 자리한 산책로,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77445&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOP5nlj26,용산구,남산 하늘숲길,맑은 하늘 아래 남산의 싱그러움을 느끼며 걸을 수 있는 산책로,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77247&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPda1e2c,노원구,수락산 벽운계곡,지하철로 갈 수 있는 서울 근교 계곡,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74596&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOPctphmy,용산구,용산 어린이정원,용산공원 반환부지 임시개방한 용산 어린이정원,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74191&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ko,KOP9l9dhu,도봉구,초안산근린공원 맨발 황톳길,도심 속 일상에 지친 시민들의 체력 증진을 위한 힐링 공간,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74029&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPylc4hg,노원구,Choansan Hydrangea Hill,"An ecological garden in the city center where about 10,000 colorful hydrangeas, walking trails, and ecological ponds harmonize.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81842&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPtte3ed,양천구,Yongwangsan Skywalk,"A place where you can view the city center and the Han River at a glance while walking above the forest.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81571&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENP3pm9nc,강북구,Bukhansan Experiential Forest Shelter,"A local attraction representing Gangbuk-gu, created as a recreation and healing space in the city.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81563&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPtr2tsi,동작구,Seodalsan Mountain,"A mountain embracing the National Cemetery, recommended as a beginner's hiking course.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80200&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPyia5so,서대문구,Yeonhui Forest Rest Area,"A rest area located in Seodaemun-gu where you can feel the beauty of nature in the city center.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79082&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENP0aa7qh,성동구,Songjeong Jebang gil,"A riverside trail along Jungnangcheon that is beautiful in all four seasons
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77445&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENP5nlj26,용산구,Namsan Sky Forest Trail,"A walking trail where visitors can enjoy the freshness of Namsan under the clear sky.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77247&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPda1e2c,노원구,Suraksan Byeokung Valley,"A valley near Seoul accessible by subway
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74596&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENPctphmy,용산구,Yongsan Children's Garden,Yongsan Children's Garden temporarily opened on the returned Yongsan Park site,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74191&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,en,ENP9l9dhu,도봉구,Choansan Neighborhood Park Barefoot Loess Trail,"A healing space to enhance the well-being of city residents weary from daily life
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74029&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPylc4hg,노원구,チョアンサン(楚安山)アジサイ園,約1万株の色とりどりのアジサイと散策路、生態池が調和した都市の中の生態庭園,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81842&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPtte3ed,양천구,ヨンワンサン(龍王山)スカイウォーク,森の上を歩きながら都心とハンガン(漢江)を一望できるスポット,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81571&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPP3pm9nc,강북구,プカンサン(北漢山)体験型森林憩いの場,都心の休養・癒やしの空間として整備された、カンブク(江北)区を代表するローカルスポット,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81563&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPtr2tsi,동작구,ソダルサン(西達山),ヒョンチュンウォン(顕忠院)を抱く山で、初心者の登山コースとしておすすめ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80200&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPyia5so,서대문구,ヨンヒ(延禧)森の憩いの場,都会の中で自然の美しさを感じられる、ソデムン(西大門)区に位置する癒やしの空間,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79082&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPP0aa7qh,성동구,ソンジョン(松亭)堤防道,四季折々の美しさを見せるチュンナンチョン(中浪川)沿いの散策路,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77445&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPP5nlj26,용산구,ナムサン(南山)空の森の道,澄んだ空の下、ナムサン(南山)の爽やかさを感じながら歩ける散策路,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77247&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPda1e2c,노원구,スラクサン(水落山)ピョグンゲゴク(碧雲渓谷),地下鉄で行けるソウル近郊の渓谷,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74596&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPPctphmy,용산구,ヨンサン(龍山)こども庭園,ヨンサン(龍山)公園の返還敷地を臨時開放したヨンサン(龍山)こども庭園,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74191&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,ja,JPP9l9dhu,도봉구,チョアンサン(楚安山)近隣公園裸足黄土道,都心での日常に疲れた市民の体力増進のためのヒーリング空間,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74029&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPylc4hg,노원구,楚安山绣球花公园,约1万株色彩缤纷的绣球花，搭配散步路和生态池塘交融而成的都市生态庭院,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81842&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPtte3ed,양천구,龙王山天空步道,漫步于林海之上，可以将市中心和汉江尽收眼底的地方,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81571&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNP3pm9nc,강북구,北汉山体验型林间休息区,作为城市内休养疗愈空间打造而成，是江北区代表性的知名景点,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81563&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPtr2tsi,동작구,西达山,一座环抱显忠院的山，适合新手攀登,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80200&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPyia5so,서대문구,延禧林间休息区,位于西大门区，感受都市中自然之美的休憩空间,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=79082&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNP0aa7qh,성동구,松亭堤防路,坐落于四季景致迷人的中浪川畔的散步路,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77445&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNP5nlj26,용산구,南山天空林荫道,在澄澈天空下漫步，尽享南山盎然绿意的散步路,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=77247&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPda1e2c,노원구,水落山碧云溪谷,乘坐地铁就能到达的首尔近郊溪谷,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74596&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNPctphmy,용산구,龙山儿童庭院,龙山公园返还用地临时开放的龙山儿童庭院,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74191&fileTy=MEDIA&fileNo=1&thumbTy=M
+자연관광,zh,CNP9l9dhu,도봉구,楚安山近邻公园赤脚黄土路,帮助因城市日常生活而疲惫不堪的市民增强体力的治愈空间,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=74029&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPw0625e,용산구,포터림,도심 속에서 흙을 만지며 무언가를 만드는 즐거움과 여유를 느낄 수 있는 도자기 공방,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81714&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPsdmz8m,영등포구,한강레져스포츠,도심 속 한강에서 만나는 수상레저 체험 공간,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81557&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPuuvdzi,용산구,아르테파인 용산(모터사이클 렌탈샵) / Artefine Yongsan(Motorcycle Rental shop),한국의 도심을 자유 라이딩으로 볼 수 있는 액티비티 관광,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81264&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPuz5pe1,송파구,한강유람선 이랜드크루즈,한강 위에서 서울의 야경과 낭만을 즐길 수 있는 특별한 유람선 체험,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81012&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOP7q4h12,노원구,노원기차마을,  스위스와 이탈리아를 단독테마로 하며 10분간격으로 낮과 밤이 바뀌는 서울 내 최대 규모 미니어처 전시장,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80851&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOP98vqxc,강남구,Color Signal (컬러시그널),"서울 강남에서 즐기는 K-뷰티 체험! 퍼스널 컬러 진단을 통해 찾는 나에게 가장 잘 어울리는 컬러와 메이크업, 헤어, 패션 스타일",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80826&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPh6ancr,강남구,한국패션심리연구원 (Korea Fashion Psychology Institute),럭셔리 브랜드·명품 하우스가 신뢰한 청담동 퍼스널컬러 살롱,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80652&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPaijkqu,중구,명동 퍼스널컬러& 메이크업 컬러홀릭,"한국의 퍼스널 컬러 진단, 체형분석, K뷰티 메이크업을 직접 체험할 수 있는 전문 컨설팅 공간",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80379&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPhd6ywx,종로구,아델라인 주얼리 스튜디오 (Adellain Jewelry Studio),전통과 현대가 어우러진 서울 종로에서 세상에 하나뿐인 실버 주얼리를 만들어 볼 수 있는 체험형 전통 한국 공예 기반 워크숍,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80368&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ko,KOPsbsko1,중구,A:muu Hair (명동 에이뮤 헤어),명동에 위치한 프리미엄 헤어살롱으로 28년 이상 경력의 대표원장이 운영하는 헤어 전문 살롱,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80365&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPw0625e,용산구,Potterim,"A ceramics studio where you can feel the joy and ease of shaping clay in the middle of the city
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81714&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPsdmz8m,영등포구,Hangang Leisure Sports,"A water leisure experience space encountered on the Han River in the city center.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81557&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPuuvdzi,용산구,Artefine Yongsan (Motorcycle Rental Shop),An activity tourism experience where you can freely ride through the heart of Seoul!,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81264&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPuz5pe1,송파구,Han River Cruise E-Land Cruise,A special cruise experience to enjoy the night view and romance of Seoul on the Han River.,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81012&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENP98vqxc,강남구,Color Signal,"K-Beauty experience enjoyed in Gangnam, Seoul! Finding the colors, makeup, hair, and fashion styles that suit me best through personal color diagnosis.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80826&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENP7q4h12,노원구,Nowon Train Village,"The largest miniature exhibition hall in Seoul with an exclusive theme of Switzerland and Italy, where day and night alternate every 10 minutes.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80851&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPh6ancr,강남구,Korea Fashion Psychology Institute,"A Cheongdam-dong personal color salon trusted by luxury brands and designer houses.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80652&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPsbsko1,중구,A:muu Hair (Myeongdong A:muu Hair),"A premium hair salon located in Myeongdong, operated by a head director with over 28 years of experience.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80365&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPhd6ywx,종로구,Adellain Jewelry Studio,"An experiential traditional Korean craft-based workshop where you can make one-of-a-kind silver jewelry in Jongno, Seoul, where tradition and modernity blend.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80368&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,en,ENPaijkqu,중구,Myeongdong Personal Color & Makeup Colorholic,"A specialized consulting space where you can directly experience Korea's personal color analysis, body type analysis, and K-beauty makeup.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80379&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPw0625e,용산구,ポターリム,都会の真ん中で土に触れ、モノづくりの楽しさとゆとりを感じられる陶芸工房,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81714&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPsdmz8m,영등포구,ハンガン(漢江)レジャースポーツ,都心を流れるハンガン(漢江)で楽しめるウォーターレジャー体験ゾーン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81557&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPuuvdzi,용산구,アルテファインヨンサン(龍山)(モーターサイクル・レンタルショップ) / Artefine Yongsan(Motorcycle Rental shop),韓国の都市部を自由なライディングで巡るアクティビティ観光,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81264&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPuz5pe1,송파구,ハンガン(漢江)遊覧船 イーランドクルーズ,ハンガン(漢江)の上でソウルの夜景とロマンを楽しめる特別な遊覧船体験,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81012&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPP7q4h12,노원구,ノウォン(蘆原)列車村,スイスとイタリアをテーマに、10分ごとに昼と夜が切り替わるソウル最大規模のミニチュア展示館,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80851&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPP98vqxc,강남구,Color Signal(カラーシグナル),ソウルのカンナム(江南)で楽しむKビューティー体験！パーソナルカラー診断で、自分に最も似合うカラーとメイク、ヘア、ファッションスタイルを見つけてみませんか。,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80826&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPh6ancr,강남구,韓国ファッション心理研究院(Korea Fashion Psychology Institute),ラグジュアリーブランドや一流メゾンからも信頼を集める、チョンダムドン(清潭洞)のパーソナルカラーサロン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80652&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPaijkqu,중구,ミョンドン(明洞)パーソナルカラー＆メイクアップカラーホリック,韓国のパーソナルカラー診断、体型分析、K-ビューティーメイクアップを直接体験できる専門コンサルティングサロン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80379&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPhd6ywx,종로구,アデラインジュエリースタジオ(Adellain Jewelry Studio),伝統と現代が融合したソウル・チョンノ(鐘路)で、世界にひとつだけのシルバージュエリーを作ることができる体験型の伝統韓国工芸をベースとしたワークショップ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80368&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,ja,JPPsbsko1,중구,A: muu Hair(ミョンドン(明洞)エイミューヘア),ミョンドン(明洞)に位置するプレミアムヘアサロンで、28年以上のキャリアを持つ代表院長が運営するヘア専門サロン,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80365&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPw0625e,용산구,Potterim,可以在城市之中触摸陶土，感受造物乐趣与惬意时光的陶瓷工坊,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81714&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPsdmz8m,영등포구,汉江休闲运动,在都市之中，邂逅汉江水上休闲体验空间,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81557&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPuuvdzi,용산구,Artefine龙山店（摩托车租赁店) / Artefine Yongsan(Motorcycle Rental shop), 骑行畅游韩国市中心的动感体验观光 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81264&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPuz5pe1,송파구,汉江游览船Eland Cruise,泛舟汉江之上，沉浸式体验首尔夜景和浪漫氛围的特色游船之旅,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81012&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNP7q4h12,노원구,芦原火车村,  这是首尔规模最大的微缩模型展馆，单独设立瑞士、意大利两大主题展区，场内每10分钟会模拟昼夜交替效果,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80851&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNP98vqxc,강남구,Color Signal,在首尔江南体验韩式美妆！通过个人色彩诊断，找到最适配自己的色系、妆容、发型和穿搭风格,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80826&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPh6ancr,강남구,韩国时尚心理研究院(Korea Fashion Psychology Institute),众多奢侈品牌、高端名品工坊都信赖的清潭洞个人色彩形象沙龙,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80652&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPaijkqu,중구,明洞Personal Color&Makeup Color Holic,这里是专业形象咨询空间，可体验韩式个人色彩诊断、身形分析及韩式美妆造型服务,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80379&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPhd6ywx,종로구,Adellain珠宝工作室(Adellain Jewelry Studio),坐落于传统与现代交融的首尔钟路区，这是一处以韩国传统工艺为基础的体验工坊，可亲手打造独一无二的银饰珠宝,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80368&fileTy=MEDIA&fileNo=1&thumbTy=M
+체험관광,zh,CNPsbsko1,중구,明洞A:muu Hair,位于明洞的高端美发沙龙，由拥有28年以上从业经验的主理人经营,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=80365&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOP8m1ey6,중구,서울라이트 DDP 2026 가을,222m에 이르는 세계 최대 비정형 미디어 파사드 축제 ,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82088&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPaecwqv,영등포구,HELLO SEOUL (더현대 서울 쇼핑 페스타),"10일간, 더현대 서울에서만 만날 수 있는 K-컬처 콘텐츠와 단독 쇼핑 혜택",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82085&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPptkfz1,중구,2027 S/S 서울패션위크	," DDP와 잠실 롯데월드몰 등에서 개최하는 글로벌 패션 비즈니스 축제	
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81703&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPun82v3,영등포구,한화와 함께하는 서울세계불꽃축제 2026,시민의 일상에 즐거움을 선사하기 위해 한화 그룹에서 꾸준히 진행해 온 대한민국 최고의 축제,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81789&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPwqkvqs,종로구,2026 서울국제작가축제,누구세요? Who are we? 한국문학과 세계문학의 교류를 위해 2006년부터 이어온 글로벌 문학 축제,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81700&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPbr2z6a,중구,DDP 디자인마이애미 서울 2026 (Design Miami Seoul),'살롱(Salon)' 개념을 도입해 디자인을 문화적 담론과 비즈니스가 함께 이루어지는 플랫폼으로 확장한 디자인마이애미 서울,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81695&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPd2rqmc,중구,2026 DDP 디자인 북페어,"완성된 책 너머, 디자인의 언어와 제작의 이야기를 만나는 디자인 북페어 ",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81530&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOP6t7xg8,중구,뷰티풀라이프인서울(BLS),서울시가 올해 처음 선보이는 라이프스타일 축제,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81507&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPne4zl0,서초구,서초-한강 아트투어 ,고속터미널역 인근의 공공미술 작품을 감상하고 반포한강공원까지 이동하는 무료 문화 체험 프로그램,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81440&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ko,KOPjm3hw1,종로구,2026 서울어텀페스타 ,"가을 시즌 서울 전역에서 펼쳐지는 민간·공공 공연예술 작품, 축제 및 연계 프로그램을 하나의 통합브랜드로 연결해 공연예술 정보 제공 및 통합홍보 추진",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81433&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPaecwqv,영등포구,HELLO SEOUL (The Hyundai Seoul Shopping Festa),"Ten days of K-culture programs and exclusive shopping offers found only at The Hyundai Seoul
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82085&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENP8m1ey6,중구,SEOUL LIGHT DDP 2026 Autumn,"The world's largest free-form media facade festival, stretching 222 meters
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82088&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPptkfz1,중구,2027 S/S Seoul Fashion Week,"A global fashion business festival held at DDP and Jamsil Lotte World Mall.
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81703&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPun82v3,영등포구,Seoul International Fireworks Festival 2026 with Hanwha,"Korea's best festival consistently held by Hanwha Group to bring joy to the daily lives of citizens.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81789&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPwqkvqs,종로구,2026 Seoul International Writers' Festival,"Who are you? Who are we? A global literary festival continuing since 2006 for the exchange of Korean and world literature.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81700&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPd2rqmc,중구,2026 DDP Design Book Fair,"Beyond the finished book, a design book fair to encounter the language of design and the story of production.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81530&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPbr2z6a,중구,Design Miami Seoul 2026,Design Miami Seoul expands design into a platform where cultural discourse and business take place together by introducing the concept of a 'Salon'.,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81695&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENP6t7xg8,중구,Beautiful Life in Seoul (BLS),"The lifestyle festival introduced by the Seoul Metropolitan Government for the first time this year.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81507&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPjm3hw1,종로구,2026 SEOUL AUTUMN FESTA,"Providing performing arts information and executing integrated promotions by connecting private and public performing arts works, festivals, and related programs held throughout Seoul during the autum",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81433&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,en,ENPne4zl0,서초구,SEOCHO HAN RIVER ART TOUR ,"A free cultural experience program where you can appreciate public art works near Express Bus Terminal Station and move to Banpo Hangang Park.
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81447&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPP8m1ey6,중구,ソウルライト DDP 2026 秋,222mに及ぶ世界最大の非定型メディアファサードフェスティバル,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82088&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPaecwqv,영등포구,HELLO SEOUL(The Hyundai Seoul ショッピングフェスタ),10日間、The Hyundai Seoulでしか出会えないK-カルチャーコンテンツと限定ショッピング特典,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82085&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPptkfz1,중구,2027 S/S ソウルファッションウィーク,"DDPやチャムシル(蚕室)ロッテワールドモールなどで開催されるグローバルファッションビジネスフェスティバル
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81703&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPun82v3,영등포구,ハンファと共にするソウル世界花火祭り2026,"市民の日常に楽しさを届けるため、ハンファグループが継続して開催してきた韓国最高のフェスティバル
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81789&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPwqkvqs,종로구,2026 ソウル国際作家フェスティバル,"「どなたですか？ Who are we?」 韓国文学と世界文学の交流のため、2006年から継続して開催されてきたグローバル文学フェスティバル
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81700&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPbr2z6a,중구,DDP デザインマイアミ ソウル 2026(Design Miami Seoul),"「サロン(Salon)」の概念を導入し、デザインを文化的言説とビジネスが共存するプラットフォームへと拡張したデザインマイアミソウル(Design Miami Seoul)
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81695&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPd2rqmc,중구,2026 DDPデザインブックフェア,完成された本の先にある、デザインの言語と制作の物語に出会うデザインブックフェア,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81530&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPP6t7xg8,중구,ビューティフル・ライフ・イン・ソウル(BLS),ソウル市が今年初めて開催するライフスタイル・フェスティバル,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81507&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPne4zl0,서초구,ソチョ(瑞草)-ハンガン(漢江)アートツアー,コソクターミナル駅周辺のパブリックアート作品を鑑賞しながらパンポハンガン(盤浦漢江)公園まで歩く、無料の文化体験プログラム,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81440&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,ja,JPPjm3hw1,종로구,2026 ソウルオータムフェスタ,秋シーズンにソウル全域で開催される民間・公共の舞台芸術作品、祭り、および連動プログラムを一つの統合ブランドとして結びつけ、舞台芸術情報の提供および統合広報を推進,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81433&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNP8m1ey6,중구,首尔之光DDP2026秋季,长达222m的世界最大异形媒体立面灯光节,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82088&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPaecwqv,영등포구,HELLO SEOUL（现代首尔购物节）,为期10天，唯有在现代首尔才能体验的韩流文化内容与专属购物优惠,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=82085&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPptkfz1,중구,2027 S/S首尔时装周," 在东大门设计广场（DDP）和蚕室乐天世界购物中心等地举办的全球时尚商务盛典
+
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81703&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPun82v3,영등포구,韩华呈献2026首尔世界烟花节,"这是韩华集团为给市民日常生活带去欢乐，持续举办的韩国顶级庆典活动
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81789&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPwqkvqs,종로구,2026首尔国际作家节,"你是谁？我们是谁？为促进韩国文学与世界文学交流，自2006年延续至今的全球文学盛典
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81700&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPbr2z6a,중구,2026首尔DDP迈阿密设计展(Design Miami Seoul),"首尔迈阿密设计展引入“沙龙（Salon）”概念，将设计拓展为一个兼具文化交流与商业对接功能的平台
+",https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81695&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPd2rqmc,중구,2026 DDP设计书展,超越成书本身，邂逅设计语言和制作故事的设计书展,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81530&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNP6t7xg8,중구,Beautiful Life in Seoul(BLS),首尔市今年首次推出的生活方式庆典,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81507&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPne4zl0,서초구,瑞草-汉江艺术之旅,可欣赏高速巴士客运站附近的公共艺术作品，并前往盘浦汉江公园的免费文化体验活动,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81440&fileTy=MEDIA&fileNo=1&thumbTy=M
+축제,zh,CNPjm3hw1,종로구,2026首尔秋日庆典,将秋季在首尔全市举办的民间及公共表演艺术作品、庆典和活动项目，整合为统一品牌，以此提供表演艺术相关信息并进行综合宣传,https://api.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=81433&fileTy=MEDIA&fileNo=1&thumbTy=M

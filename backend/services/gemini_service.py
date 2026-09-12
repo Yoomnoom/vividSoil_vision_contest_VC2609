@@ -16,33 +16,16 @@ LANGUAGE_NAMES = {
     "zh": "简体中文",
 }
 
-_SPOT_ITEM_SCHEMA = {
+# Gemini는 주어진 후보(비짓서울 실제 콘텐츠) 중에서만 골라 cid로 응답한다 - 장소 자체를
+# 새로 만들어내지 않는다(PRD 3-2/7절). name/description/사진/링크는 후보 데이터를 그대로 쓴다.
+_SELECTION_ITEM_SCHEMA = {
     "type": "object",
     "properties": {
-        "name": {"type": "string"},
-        "search_keyword": {"type": "string"},
-        "description": {"type": "string"},
+        "cid": {"type": "string"},
         "why_this_weather": {"type": "string"},
     },
-    "required": ["name", "search_keyword", "description", "why_this_weather"],
+    "required": ["cid", "why_this_weather"],
 }
-
-_FOOD_ITEM_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "name": {"type": "string"},
-        "search_keyword": {"type": "string"},
-        "menu": {"type": "string"},
-        "why_this_weather": {"type": "string"},
-    },
-    "required": ["name", "search_keyword", "menu", "why_this_weather"],
-}
-
-_SEARCH_KEYWORD_GUIDE = (
-    "search_keyword는 name과 별개로, 지도 앱이나 관광 정보 사이트에서 검색했을 때 정확히 매칭될 "
-    "장소의 공식/고유 명칭만 간결하게 적으세요(수식어·설명 문구 제외). 예: name이 \"봉은사 미륵대불 정원\"이면 "
-    "search_keyword는 \"봉은사\"."
-)
 
 WEATHER_PICKS_COUNT = 6
 
@@ -61,7 +44,7 @@ _SUMMARY_SCHEMA = {
 
 _WEATHER_PICKS_SCHEMA = {
     "type": "object",
-    "properties": {"items": {"type": "array", "items": _SPOT_ITEM_SCHEMA}},
+    "properties": {"items": {"type": "array", "items": _SELECTION_ITEM_SCHEMA}},
     "required": ["items"],
 }
 
@@ -85,7 +68,10 @@ def _language_instruction(language: str) -> str:
     if language == "ko":
         return ""
     language_name = LANGUAGE_NAMES.get(language, LANGUAGE_NAMES["ko"])
-    return f"\n중요: 모든 응답 텍스트를 {language_name}로 작성하세요 (지역명·고유명사도 가능하면 {language_name} 표기 병기).\n"
+    return f"\n중요: why_this_weather를 포함한 모든 응답 텍스트를 {language_name}로 작성하세요.\n"
+
+
+GEMINI_TIMEOUT_MS = 30_000  # Gemini 장애 시 무한 대기하지 않도록 요청당 타임아웃(30초)을 둔다
 
 
 def _generate(model: str, prompt: str, schema: dict) -> dict:
@@ -96,6 +82,7 @@ def _generate(model: str, prompt: str, schema: dict) -> dict:
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=schema,
+            http_options=types.HttpOptions(timeout=GEMINI_TIMEOUT_MS),
         ),
     )
     return json.loads(response.text)
@@ -113,30 +100,53 @@ def _generate_summary(model: str, region: str, weather: dict, language: str) -> 
     return _generate(model, prompt, _SUMMARY_SCHEMA)
 
 
-def _generate_weather_picks(model: str, region: str, weather: dict, language: str) -> list:
+def _format_candidates(candidates: list[dict]) -> str:
+    lines = []
+    for c in candidates:
+        description = (c.get("description") or "").strip().replace("\n", " ")
+        if len(description) > 80:
+            description = description[:80] + "..."
+        lines.append(f'- cid="{c["cid"]}" name="{c["name"]}" description="{description}"')
+    return "\n".join(lines)
+
+
+_SELECTION_GUIDE = (
+    "아래 후보 목록에 있는 cid만 사용하세요. 후보에 없는 cid를 만들어내거나 이름만 보고 다른 곳을 "
+    "추천하지 마세요. 후보 수가 요청한 곳 수보다 적으면 있는 만큼만 고르세요."
+)
+
+
+def _generate_weather_picks(
+    model: str, region: str, weather: dict, language: str, candidates: list[dict]
+) -> list:
+    if not candidates:
+        return []
+
     prompt = f"""당신은 국내 지역 여행 전문가입니다.
 
 {_weather_context(region, weather)}
 {_language_instruction(language)}
+아래는 이 지역에서 고를 수 있는 실제 장소 후보 목록입니다:
+{_format_candidates(candidates)}
+
 요구사항:
-- 관심사 카테고리 구분 없이, 오늘 날씨에 가장 적합한 장소 {WEATHER_PICKS_COUNT}곳을 추천하세요. 예를 들어 비가 오거나
-  폭염·한파면 도서관·박물관·실내 카페 등 실내 위주로, 맑고 선선하면 공원·전망대 등 야외 위주로 장소를 고르세요.
-  관광 안내 책자에 잘 나오지 않는, 현지인이 즐겨 찾는 장소 위주로 추천하세요.
-- 각 추천마다 why_this_weather에 위 날씨 조건에서 왜 그 장소가 적합한지 이유를 제시하세요.
-- {_SEARCH_KEYWORD_GUIDE}
+- 관심사 카테고리 구분 없이, 위 후보 중 오늘 날씨에 가장 적합한 장소를 최대 {WEATHER_PICKS_COUNT}곳 고르세요.
+  예를 들어 비가 오거나 폭염·한파면 실내 위주로, 맑고 선선하면 야외 위주로 고르세요.
+- 각 선택마다 why_this_weather에 위 날씨 조건에서 왜 그 장소가 적합한지 이유를 제시하세요.
+- {_SELECTION_GUIDE}
 """
-    return _generate(model, prompt, _WEATHER_PICKS_SCHEMA)["items"]
+    result = _generate(model, prompt, _WEATHER_PICKS_SCHEMA)["items"]
+    return _resolve_selection(result, {c["cid"]: c for c in candidates})
 
 
 def _build_group_schema(interests: list[str]) -> dict:
     properties = {}
     for interest in interests:
-        item_schema = _FOOD_ITEM_SCHEMA if interest == "음식" else _SPOT_ITEM_SCHEMA
         properties[interest] = {
             "type": "object",
             "properties": {
                 "section_title": {"type": "string"},
-                "items": {"type": "array", "items": item_schema},
+                "items": {"type": "array", "items": _SELECTION_ITEM_SCHEMA},
             },
             "required": ["section_title", "items"],
         }
@@ -144,12 +154,17 @@ def _build_group_schema(interests: list[str]) -> dict:
 
 
 def _generate_category_group(
-    model: str, region: str, weather: dict, count: int, interests: list[str], language: str
+    model: str,
+    region: str,
+    weather: dict,
+    count: int,
+    interests: list[str],
+    language: str,
+    candidates_by_interest: dict[str, list[dict]],
 ) -> dict:
     category_lines = "\n".join(
-        f'- "{interest}": section_title은 이 관심사가 드러나는 8자 내외 제목(예: 역사관광이면 "역사가 숨쉬는 명소", '
-        f'음식이면 "현지인이 인정한 맛집"), items는 {count}곳'
-        + ("(각 항목은 실제 맛집 이름과 대표 메뉴)" if interest == "음식" else "")
+        f'- "{interest}" (section_title은 이 관심사가 드러나는 8자 내외 제목, 예: 역사관광이면 "역사가 숨쉬는 명소", '
+        f'음식이면 "현지인이 인정한 맛집" / items는 아래 후보 중 최대 {count}곳):\n{_format_candidates(candidates_by_interest.get(interest, []))}'
         for interest in interests
     )
     interest_list = ", ".join(interests)
@@ -159,15 +174,42 @@ def _generate_category_group(
 {_weather_context(region, weather)}
 사용자가 선택한 관심사: {interest_list}
 {_language_instruction(language)}
-요구사항:
-- 아래 각 관심사 키마다 해당 카테고리에 맞는 장소를 추천하세요. 관광 안내 책자에 잘 나오지 않는, 현지인이
-  즐겨 찾는 장소 위주로 추천하고, 관심사 간 장소가 겹치지 않게 하세요.
+관심사별 후보 목록:
 {category_lines}
-- 각 추천마다 why_this_weather에 위 날씨 조건에서 왜 그 장소가 적합한지 이유를 제시하세요
+
+요구사항:
+- 각 관심사 키마다 그 관심사의 후보 목록에서만 골라, 오늘 날씨에 가장 잘 맞는 곳을 고르세요.
+  관심사 간 장소가 겹치지 않게 하세요.
+- 각 선택마다 why_this_weather에 위 날씨 조건에서 왜 그 장소가 적합한지 이유를 제시하세요
   (예: 비/폭염이면 실내·그늘 위주, 맑고 선선하면 야외 위주).
-- {_SEARCH_KEYWORD_GUIDE}
+- {_SELECTION_GUIDE}
 """
-    return _generate(model, prompt, _build_group_schema(interests))
+    result = _generate(model, prompt, _build_group_schema(interests))
+    return {
+        interest: {
+            "section_title": result[interest]["section_title"],
+            "items": _resolve_selection(
+                result[interest]["items"], {c["cid"]: c for c in candidates_by_interest.get(interest, [])}
+            ),
+        }
+        for interest in interests
+    }
+
+
+def _resolve_selection(selection: list[dict], candidates_by_cid: dict[str, dict]) -> list[dict]:
+    """Gemini가 고른 {cid, why_this_weather} 목록을, 후보 데이터(name/description/사진/링크)와
+    합쳐 최종 카드 데이터로 만든다. 후보에 없는 cid(환각 방지 실패)는 버린다.
+    """
+    resolved = []
+    seen = set()
+    for entry in selection:
+        cid = entry.get("cid")
+        candidate = candidates_by_cid.get(cid)
+        if not candidate or cid in seen:
+            continue
+        seen.add(cid)
+        resolved.append({**candidate, "why_this_weather": entry.get("why_this_weather", "")})
+    return resolved
 
 
 def _chunk(items: list, group_count: int) -> list:
@@ -178,20 +220,35 @@ def _chunk(items: list, group_count: int) -> list:
 
 
 def generate_recommendations(
-    region: str, weather: dict, count: int = 3, interests: list[str] | None = None, language: str = "ko"
+    region: str,
+    weather: dict,
+    candidates_by_interest: dict[str, list[dict]],
+    count: int = 6,
+    interests: list[str] | None = None,
+    language: str = "ko",
 ) -> dict:
+    """candidates_by_interest(관심사별 비짓서울 실제 콘텐츠 후보)에서 오늘 날씨에 맞는 곳을
+    Gemini가 고르게 해 추천을 만든다. Gemini는 후보에 없는 장소를 만들어내지 않는다(PRD 3-2).
+    """
     interests = interests or DEFAULT_INTERESTS
     if language not in LANGUAGE_NAMES:
         language = "ko"
 
     model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
     groups = _chunk(interests, CATEGORY_GROUP_COUNT)
+    all_candidates = list({
+        c["cid"]: c for items in candidates_by_interest.values() for c in items
+    }.values())
 
     with ThreadPoolExecutor(max_workers=len(groups) + 2) as executor:
         summary_future = executor.submit(_generate_summary, model, region, weather, language)
-        weather_picks_future = executor.submit(_generate_weather_picks, model, region, weather, language)
+        weather_picks_future = executor.submit(
+            _generate_weather_picks, model, region, weather, language, all_candidates
+        )
         group_futures = [
-            executor.submit(_generate_category_group, model, region, weather, count, group, language)
+            executor.submit(
+                _generate_category_group, model, region, weather, count, group, language, candidates_by_interest
+            )
             for group in groups
         ]
 
