@@ -90,7 +90,15 @@ export default function SeoulEvents({ language = 'ko', region, keyword, title, m
         {items.slice(0, 10).map((item) => (
           <article className="rec-card" key={item.cid}>
             {item.main_img && (
-              <img className="rec-card-photo" src={item.main_img} alt={item.post_sj} loading="lazy" />
+              <img
+                className="rec-card-photo"
+                src={item.main_img}
+                alt={item.post_sj}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                }}
+              />
             )}
             <div className="rec-card-body">
               <h4>{item.post_sj}</h4>

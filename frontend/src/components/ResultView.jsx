@@ -31,7 +31,15 @@ function RecommendationCard({ region, item, t }) {
   return (
     <article className="rec-card">
       {item.photo_url && (
-        <img className="rec-card-photo" src={item.photo_url} alt={item.name} loading="lazy" />
+        <img
+          className="rec-card-photo"
+          src={item.photo_url}
+          alt={item.name}
+          loading="lazy"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none'
+          }}
+        />
       )}
       <div className="rec-card-body">
         <h4>{item.name}</h4>
@@ -220,7 +228,6 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
             type="button"
             className={`refresh-btn${isPreview ? ' is-spinning' : ''}`}
             onClick={onRefresh}
-            disabled={isPreview}
             aria-label={t.refresh}
             title={t.refresh}
           >

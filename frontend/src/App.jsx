@@ -101,7 +101,7 @@ function App() {
   }, [language])
 
   function handleRefresh() {
-    if (!result || result.isPreview) return
+    if (!result) return
     runSearch(result.region, result.date, result.endDate, { resetTab: false })
   }
 
