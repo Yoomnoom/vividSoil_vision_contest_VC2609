@@ -44,10 +44,10 @@ function App() {
     }
   }, [result])
 
-  async function handleSearch({ region: searchRegion, date, endDate }) {
+  async function runSearch(searchRegion, date, endDate, { resetTab = true } = {}) {
     setLoading(true)
     setError(null)
-    setActiveTab(ALL_TAB)
+    if (resetTab) setActiveTab(ALL_TAB)
     // Gemini 추천이 완성되길 기다리는 동안, 비짓서울 CSV로 미리 채운 미리보기를 먼저 보여준다.
     setResult({
       region: searchRegion,
@@ -75,6 +75,23 @@ function App() {
       setLoading(false)
     }
   }
+
+  function handleSearch({ region: searchRegion, date, endDate }) {
+    return runSearch(searchRegion, date, endDate)
+  }
+
+  const isFirstLanguageRender = useRef(true)
+  useEffect(() => {
+    if (isFirstLanguageRender.current) {
+      isFirstLanguageRender.current = false
+      return
+    }
+    // 이미 결과가 나와있는 상태에서 언어만 바꾸면, 같은 지역/날짜로 그 언어 기준
+    // 추천을 다시 받아온다(탭 선택은 유지).
+    if (!result || result.isPreview) return
+    runSearch(result.region, result.date, result.endDate, { resetTab: false })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language])
 
   function scrollToSearchForm() {
     searchSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
