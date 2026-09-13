@@ -302,6 +302,15 @@ export default function ResultView({ result, activeTab, onTabChange, onRefresh, 
               </div>
             )}
 
+            {recommendation.ai_failed && (
+              <div className="weather-summary-box">
+                <span className="weather-summary-icon">
+                  <img src={aiSparkleIcon} alt="" />
+                </span>
+                <p className="weather-summary">{t.aiRecommendationFailed}</p>
+              </div>
+            )}
+
             {tripDays && (
               <>
                 <div className="daily-forecast">

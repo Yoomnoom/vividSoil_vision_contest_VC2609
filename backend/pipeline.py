@@ -36,9 +36,21 @@ def get_travel_recommendation(
     lang_code_id = LANG_CODE_MAP.get(language, "ko")
     candidates_by_interest = get_candidates_by_interest(interests, district, lang_code_id)
 
-    recommendation = generate_recommendations(
-        region, weather_by_day_ko[0], candidates_by_interest, CATEGORY_SPOT_COUNT, interests, language
-    )
+    try:
+        recommendation = generate_recommendations(
+            region, weather_by_day_ko[0], candidates_by_interest, CATEGORY_SPOT_COUNT, interests, language
+        )
+    except Exception as e:
+        # Gemini 쪽만 실패해도(예: 무료 티어 일일 할당량 초과) 이미 구한 날씨는 보여줄 수
+        # 있어야 한다 - AI 추천 없이 반환하고, 프론트가 "AI 추천을 불러오지 못했습니다"로 표시한다.
+        print(f"[pipeline] Gemini 추천 생성 실패, 날씨만 반환: {e}", file=sys.stderr)
+        recommendation = {
+            "weather_desc": "",
+            "spot_reason": "",
+            "weather_picks": [],
+            "categories": {},
+            "ai_failed": True,
+        }
 
     weather_by_day = (
         weather_by_day_ko

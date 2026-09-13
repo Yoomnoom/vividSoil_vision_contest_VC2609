@@ -137,6 +137,7 @@ const STRINGS = {
     previewBadge: 'AI 맞춤 추천 준비 중 · 우선 서울의 인기 스팟을 보여드려요',
     weatherLoadFailed: '날씨 정보를 불러오지 못했습니다.',
     weatherRetry: '다시 시도',
+    aiRecommendationFailed: 'AI 추천을 만드는 중 문제가 생겼어요. 날씨는 정상적으로 확인할 수 있고, 아래 카테고리 탭에서 명소·맛집은 계속 둘러보실 수 있습니다.',
   },
   en: {
     appTitle: 'VividSoul',
@@ -188,6 +189,7 @@ const STRINGS = {
     previewBadge: 'Preparing your AI picks · showing popular Seoul spots first',
     weatherLoadFailed: 'Couldn’t load weather information.',
     weatherRetry: 'Try again',
+    aiRecommendationFailed: 'We couldn’t generate AI picks right now. Weather is still up to date, and you can keep browsing spots and restaurants in the category tabs below.',
   },
   ja: {
     appTitle: 'VividSoul',
@@ -239,6 +241,7 @@ const STRINGS = {
     previewBadge: 'AIおすすめを準備中 · まずソウルの人気スポットを表示します',
     weatherLoadFailed: '天気情報を取得できませんでした。',
     weatherRetry: '再試行',
+    aiRecommendationFailed: 'AIのおすすめ生成に問題が発生しました。天気は引き続きご確認いただけ、下のカテゴリータブからスポット・グルメも閲覧できます。',
   },
   zh: {
     appTitle: 'VividSoul',
@@ -290,6 +293,7 @@ const STRINGS = {
     previewBadge: 'AI推荐生成中 · 先为您展示首尔人气景点',
     weatherLoadFailed: '无法获取天气信息。',
     weatherRetry: '重试',
+    aiRecommendationFailed: 'AI推荐生成时出现问题。天气信息仍可正常查看，您也可以继续在下方分类标签中浏览景点和美食。',
   },
 }
 
