@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Weather Motion Preview</title>
+<style>
+  :root {
+    --bg: #eef1fa;
+    --bg-2: #dde3f5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 100%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: url("../frontend/src/assets/bg.png") center center / cover no-repeat;
+    opacity: 0.4;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("../frontend/src/assets/skyline.png") bottom center / 100% auto no-repeat;
+  }
+
+  /* ---- controls ---- */
+  .controls {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .controls button {
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid rgba(108, 76, 241, 0.3);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #2c3352;
+    cursor: pointer;
+  }
+
+  .controls button.is-active {
+    background: linear-gradient(135deg, #6c4cf1, #8f6bff);
+    color: #fff;
+    border-color: transparent;
+  }
+
+  .label {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: #6b7290;
+    font-size: 13px;
+    margin-top: -8px;
+  }
+
+  /* ---- weather layer ---- */
+  .weather-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .weather-layer img {
+    position: absolute;
+    filter: drop-shadow(0 4px 10px rgba(60, 70, 110, 0.12));
+  }
+
+  /* sun */
+  .part-sun {
+    width: 140px;
+    top: 20%;
+    left: 12%;
+    animation: sun-pulse 5s ease-in-out infinite, sun-spin 70s linear infinite;
+    transform-origin: center;
+  }
+  @keyframes sun-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+  @keyframes sun-spin {
+    from { rotate: 0deg; }
+    to { rotate: 360deg; }
+  }
+
+  /* generic drifting cloud */
+  .part-cloud {
+    width: 220px;
+    top: 14%;
+    animation: cloud-drift linear infinite;
+  }
+  .part-cloud.c2 {
+    width: 160px;
+    top: 24%;
+    opacity: 0.85;
+  }
+  @keyframes cloud-drift {
+    from { transform: translateX(-20vw); }
+    to { transform: translateX(120vw); }
+  }
+
+  /* fog bands */
+  .part-fog {
+    width: 260px;
+    opacity: 0.5;
+    animation: fog-drift linear infinite;
+  }
+  @keyframes fog-drift {
+    from { transform: translateX(-30vw); }
+    to { transform: translateX(130vw); }
+  }
+
+  /* rain streak */
+  .part-rain {
+    width: 34px;
+    top: -10%;
+    animation: rain-fall linear infinite;
+  }
+  @keyframes rain-fall {
+    from { transform: translateY(-20vh); opacity: 0.9; }
+    to { transform: translateY(110vh); opacity: 0.6; }
+  }
+
+  /* snowflake */
+  .part-snow {
+    width: 40px;
+    top: -10%;
+    animation: snow-fall linear infinite;
+  }
+  @keyframes snow-fall {
+    from { transform: translateY(-20vh) rotate(0deg); }
+    to { transform: translateY(110vh) rotate(360deg); }
+  }
+
+  /* lightning flash */
+  .part-lightning {
+    width: 90px;
+    top: 20%;
+    opacity: 0;
+    animation: lightning-flash 6s ease-in-out infinite;
+  }
+  @keyframes lightning-flash {
+    0%, 92%, 100% { opacity: 0; }
+    93% { opacity: 1; }
+    94% { opacity: 0.2; }
+    95% { opacity: 1; }
+    97% { opacity: 0; }
+  }
+
+  /* wind swirl */
+  .part-wind {
+    width: 100px;
+    animation: wind-drift linear infinite;
+  }
+  @keyframes wind-drift {
+    from { transform: translateX(-20vw); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    to { transform: translateX(120vw); opacity: 0; }
+  }
+
+  /* birds */
+  .part-birds {
+    width: 70px;
+    top: 10%;
+    animation: birds-fly linear infinite;
+  }
+  @keyframes birds-fly {
+    0%   { transform: translate(-15vw, 0); }
+    10%  { transform: translate(-2vw, -3vh); }
+    20%  { transform: translate(11vw, 1vh); }
+    30%  { transform: translate(24vw, -3vh); }
+    40%  { transform: translate(37vw, 1vh); }
+    50%  { transform: translate(50vw, -3vh); }
+    60%  { transform: translate(63vw, 1vh); }
+    70%  { transform: translate(76vw, -3vh); }
+    80%  { transform: translate(89vw, 1vh); }
+    90%  { transform: translate(102vw, -3vh); }
+    100% { transform: translate(115vw, 0); }
+  }
+
+  /* rainbow */
+  .part-rainbow {
+    width: 340px;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rainbow-fade 8s ease-in-out infinite alternate;
+  }
+  @keyframes rainbow-fade {
+    from { opacity: 0.55; }
+    to { opacity: 0.95; }
+  }
+
+  /* dust particles */
+  .part-dust {
+    width: 160px;
+    animation: dust-drift 14s ease-in-out infinite;
+  }
+  @keyframes dust-drift {
+    0%, 100% { transform: translate(0, 0); opacity: 0.5; }
+    50% { transform: translate(2vw, -2vh); opacity: 0.9; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="controls" id="controls"></div>
+  <p class="label">날씨 파츠 모션 검토용 페이지 — 실제 앱에는 아직 연결 안 됨</p>
+
+  <div class="weather-layer" id="layer"></div>
+
+<script>
+  const BASE = '.'; // parts live alongside this file
+
+  // 날씨마다 배경 그라데이션 색을 다르게 줘서 한눈에 구분되게 한다.
+  // (배경그림 자체(bg.png/skyline.png)는 그대로 두고, 뒤에 깔린 색상만 바꾼다.)
+  const SCENE_COLORS = {
+    sun: ['#fff4de', '#ffe0a3'],
+    cloudSun: ['#f3f2fb', '#e3ddf3'],
+    cloud: ['#e7e9f2', '#c9cee0'],
+    fog: ['#eef0f2', '#dcdfe3'],
+    rain: ['#dde3f0', '#aab8d6'],
+    snow: ['#f2f6fb', '#dbe6f2'],
+    storm: ['#c9c5db', '#8b84ab'],
+  }
+
+  // WeatherIcon.jsx와 동일한 7가지 분류 기준으로 구성
+  const SCENES = {
+    sun: {
+      label: '맑음',
+      parts: [
+        { src: 'sun.png', cls: 'part-sun' },
+        { src: 'birds.png', cls: 'part-birds', style: 'animation-duration:22s; animation-delay:1s;' },
+      ],
+    },
+    cloudSun: {
+      label: '구름 조금',
+      parts: [
+        { src: 'sun.png', cls: 'part-sun', style: 'opacity:0.9;' },
+        ...Array.from({ length: 4 }, (_, i) => ({
+          src: 'cloud_clear.png', cls: 'part-cloud',
+          style: `top:${12 + i * 6}%; width:${170 + i * 15}px; animation-duration:${34 + i * 6}s; animation-delay:-${i * 9}s; opacity:${0.95 - i * 0.05};`,
+        })),
+      ],
+    },
+    cloud: {
+      label: '흐림',
+      parts: [
+        { src: 'cloud_overcast.png', cls: 'part-cloud', style: 'top:10%; animation-duration:32s;' },
+        { src: 'cloud_overcast.png', cls: 'part-cloud c2', style: 'top:26%; animation-duration:46s; animation-delay:-10s;' },
+      ],
+    },
+    fog: {
+      label: '안개',
+      parts: [
+        { src: 'fog_bands.png', cls: 'part-fog', style: 'top:30%; animation-duration:50s;' },
+        { src: 'fog_bands.png', cls: 'part-fog', style: 'top:45%; animation-duration:65s; animation-delay:-20s; opacity:0.35;' },
+        { src: 'fog_bands.png', cls: 'part-fog', style: 'top:60%; animation-duration:40s; animation-delay:-5s;' },
+      ],
+    },
+    rain: {
+      label: '비',
+      parts: [
+        ...Array.from({ length: 24 }, (_, i) => ({
+          src: 'rain_streaks.png', cls: 'part-rain',
+          style: `left:${i * 4 + 1}%; animation-duration:${0.9 + (i % 3) * 0.15}s; animation-delay:-${i * 0.25}s;`,
+        })),
+      ],
+    },
+    snow: {
+      label: '눈',
+      parts: [
+        { src: 'cloud_overcast.png', cls: 'part-cloud', style: 'top:8%; animation-duration:44s; opacity:0.9;' },
+        ...Array.from({ length: 7 }, (_, i) => ({
+          src: 'snowflake.png', cls: 'part-snow',
+          style: `left:${i * 14 + 3}%; width:${28 + (i % 3) * 10}px; animation-duration:${6 + (i % 4)}s; animation-delay:-${i * 1.1}s;`,
+        })),
+      ],
+    },
+    storm: {
+      label: '뇌우',
+      parts: [
+        { src: 'cloud_storm.png', cls: 'part-cloud', style: 'top:6%; animation-duration:40s; width:260px;' },
+        { src: 'lightning.png', cls: 'part-lightning', style: 'left:20%;' },
+        { src: 'lightning.png', cls: 'part-lightning', style: 'left:60%; animation-delay:-3s;' },
+        ...Array.from({ length: 6 }, (_, i) => ({
+          src: 'rain_streaks.png', cls: 'part-rain',
+          style: `left:${i * 17 + 4}%; animation-duration:${0.9 + (i % 3) * 0.15}s; animation-delay:-${i * 0.25}s;`,
+        })),
+      ],
+    },
+  }
+
+  const layer = document.getElementById('layer')
+  const controls = document.getElementById('controls')
+
+  function render(key) {
+    const [bg, bg2] = SCENE_COLORS[key]
+    document.documentElement.style.setProperty('--bg', bg)
+    document.documentElement.style.setProperty('--bg-2', bg2)
+
+    layer.innerHTML = ''
+    for (const part of SCENES[key].parts) {
+      const img = document.createElement('img')
+      img.src = `${BASE}/${part.src}`
+      img.className = part.cls
+      if (part.style) img.setAttribute('style', part.style)
+      layer.appendChild(img)
+    }
+    ;[...controls.children].forEach((btn) => btn.classList.toggle('is-active', btn.dataset.key === key))
+  }
+
+  for (const key of Object.keys(SCENES)) {
+    const btn = document.createElement('button')
+    btn.textContent = SCENES[key].label
+    btn.dataset.key = key
+    btn.onclick = () => render(key)
+    controls.appendChild(btn)
+  }
+
+  render('sun')
+</script>
+</body>
+</html>

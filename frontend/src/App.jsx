@@ -3,6 +3,7 @@ import SearchForm from './components/SearchForm'
 import ResultView from './components/ResultView'
 import Toolbar from './components/Toolbar'
 import SeoulEvents from './components/SeoulEvents'
+import WeatherBackdrop from './components/WeatherBackdrop'
 import { API_BASE } from './apiBase'
 import { ALL_TAB, CATEGORIES } from './categories'
 import { getStrings, getContentsTitle, getContentsFetchError } from './i18n'
@@ -11,10 +12,11 @@ import { getRegionDisplayLabel } from './seoulDistrictsI18n'
 import useIsMobile from './useIsMobile'
 import './App.css'
 
-// 비짓서울 상세조회 캐시가 비어있는 첫 검색은 오래 걸릴 수 있지만, 그렇다고
-// 무한정 기다리게 두면 멈춘 것처럼 보인다. 이 시간을 넘기면 요청을 끊고
-// "불러오지 못했습니다 · 다시 시도" 상태로 전환한다.
-const RECOMMEND_TIMEOUT_MS = 40000
+// 비짓서울 상세조회 캐시가 비어있는 첫 검색(서버리스 콜드스타트)은 실측상 3분 가까이
+// 걸릴 수 있다 - 40초로 짧게 잡아뒀더니 정상적으로 응답이 오고 있는 요청까지 "실패"로
+// 오판했다. 여유를 두고 이 시간을 넘겨야만 요청을 끊고 "불러오지 못했습니다 · 다시 시도"
+// 상태로 전환한다.
+const RECOMMEND_TIMEOUT_MS = 180000
 
 function App() {
   const [result, setResult] = useState(null)
@@ -125,6 +127,7 @@ function App() {
 
   return (
     <div className="app">
+      <WeatherBackdrop weatherCode={result?.weather?.weather_code} condition={result?.weather?.condition} />
       {result && (
         <div className={`sticky-search-bar${showSearchBar ? ' is-visible' : ''}`}>
           <div className="sticky-search-bar-inner">

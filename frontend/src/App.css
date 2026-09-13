@@ -1529,3 +1529,112 @@
   color: var(--accent);
   background: var(--accent-bg);
 }
+
+/* ---- weather backdrop (WeatherBackdrop.jsx) ---- */
+.weather-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.weather-layer img {
+  position: absolute;
+  filter: drop-shadow(0 4px 10px rgba(60, 70, 110, 0.12));
+}
+
+.part-sun {
+  width: 140px;
+  top: 20%;
+  left: 12%;
+  animation: sun-pulse 5s ease-in-out infinite, sun-spin 70s linear infinite;
+  transform-origin: center;
+}
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+@keyframes sun-spin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+.part-cloud {
+  width: 220px;
+  top: 14%;
+  animation: cloud-drift linear infinite;
+}
+.part-cloud.c2 {
+  width: 160px;
+  top: 24%;
+  opacity: 0.85;
+}
+@keyframes cloud-drift {
+  from { transform: translateX(-20vw); }
+  to { transform: translateX(120vw); }
+}
+
+.part-fog {
+  width: 260px;
+  opacity: 0.5;
+  animation: fog-drift linear infinite;
+}
+@keyframes fog-drift {
+  from { transform: translateX(-30vw); }
+  to { transform: translateX(130vw); }
+}
+
+.part-rain {
+  width: 34px;
+  top: -10%;
+  animation: rain-fall linear infinite;
+}
+@keyframes rain-fall {
+  from { transform: translateY(-20vh); opacity: 0.9; }
+  to { transform: translateY(110vh); opacity: 0.6; }
+}
+
+.part-snow {
+  width: 40px;
+  top: -10%;
+  animation: snow-fall linear infinite;
+}
+@keyframes snow-fall {
+  from { transform: translateY(-20vh) rotate(0deg); }
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+.part-lightning {
+  width: 90px;
+  top: 20%;
+  opacity: 0;
+  animation: lightning-flash 6s ease-in-out infinite;
+}
+@keyframes lightning-flash {
+  0%, 92%, 100% { opacity: 0; }
+  93% { opacity: 1; }
+  94% { opacity: 0.2; }
+  95% { opacity: 1; }
+  97% { opacity: 0; }
+}
+
+.part-birds {
+  width: 70px;
+  top: 10%;
+  animation: birds-fly linear infinite;
+}
+@keyframes birds-fly {
+  0%   { transform: translate(-15vw, 0); }
+  10%  { transform: translate(-2vw, -3vh); }
+  20%  { transform: translate(11vw, 1vh); }
+  30%  { transform: translate(24vw, -3vh); }
+  40%  { transform: translate(37vw, 1vh); }
+  50%  { transform: translate(50vw, -3vh); }
+  60%  { transform: translate(63vw, 1vh); }
+  70%  { transform: translate(76vw, -3vh); }
+  80%  { transform: translate(89vw, 1vh); }
+  90%  { transform: translate(102vw, -3vh); }
+  100% { transform: translate(115vw, 0); }
+}
+
