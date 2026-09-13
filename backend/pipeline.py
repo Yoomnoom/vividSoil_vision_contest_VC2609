@@ -41,14 +41,20 @@ def get_travel_recommendation(
             region, weather_by_day_ko[0], candidates_by_interest, CATEGORY_SPOT_COUNT, interests, language
         )
     except Exception as e:
-        # Gemini 쪽만 실패해도(예: 무료 티어 일일 할당량 초과) 이미 구한 날씨는 보여줄 수
-        # 있어야 한다 - AI 추천 없이 반환하고, 프론트가 "AI 추천을 불러오지 못했습니다"로 표시한다.
-        print(f"[pipeline] Gemini 추천 생성 실패, 날씨만 반환: {e}", file=sys.stderr)
+        # Gemini 쪽만 실패해도(예: 무료 티어 일일 할당량 초과) 이미 구한 비짓서울 후보는
+        # 그대로 보여준다 - "오늘 날씨 맞춤" 큐레이션(why_this_weather)만 못 만들 뿐, 이름·
+        # 사진·설명·링크는 실제 데이터라 카테고리 화면이 통째로 비지 않는다.
+        print(f"[pipeline] Gemini 추천 생성 실패, 후보 목록만 그대로 반환: {e}", file=sys.stderr)
+        categories = {
+            interest: {"section_title": "", "items": items[:CATEGORY_SPOT_COUNT]}
+            for interest, items in candidates_by_interest.items()
+            if items
+        }
         recommendation = {
             "weather_desc": "",
             "spot_reason": "",
             "weather_picks": [],
-            "categories": {},
+            "categories": categories,
             "ai_failed": True,
         }
 

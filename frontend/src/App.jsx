@@ -18,6 +18,21 @@ import './App.css'
 // 상태로 전환한다.
 const RECOMMEND_TIMEOUT_MS = 180000
 
+// 실제 응답의 카테고리가 비어있으면(예: Gemini 실패, 비짓서울 후보 없음) 미리보기 때
+// 보여주던 CSV 플레이스홀더로 그 카테고리만 채운다 - 이미 화면에 떠 있던 정보가 실제
+// 응답이 도착했다고 해서 갑자기 사라지는 것을 막기 위함이다.
+function fillEmptyCategories(recommendation, searchRegion, language) {
+  const placeholder = getPlaceholderRecommendation(searchRegion, language)
+  const categories = { ...recommendation.categories }
+  for (const category of CATEGORIES) {
+    const real = categories[category]
+    if ((!real || real.items.length === 0) && placeholder.categories[category]) {
+      categories[category] = placeholder.categories[category]
+    }
+  }
+  return { ...recommendation, categories }
+}
+
 function App() {
   const [result, setResult] = useState(null)
   const [loading, setLoading] = useState(false)
@@ -85,7 +100,12 @@ function App() {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || t.fetchError)
-      setResult({ ...data, date, endDate })
+      setResult({
+        ...data,
+        recommendation: fillEmptyCategories(data.recommendation, searchRegion, language),
+        date,
+        endDate,
+      })
     } catch (err) {
       if (err.name === 'AbortError') {
         setResult((prev) => (prev ? { ...prev, isPreview: false, loadFailed: true } : prev))
