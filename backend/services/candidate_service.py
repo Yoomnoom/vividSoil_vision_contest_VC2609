@@ -1,3 +1,5 @@
+import csv
+import functools
 import os
 import threading
 import time
@@ -14,6 +16,45 @@ from services.visitseoul_service import (
     get_category_contents,
     get_content_detail,
 )
+
+# 비짓서울 API가 완전히 막혔을 때(WAF 차단 등) 카테고리 화면이 통째로 비지 않도록 쓰는
+# 최후의 폴백. PRD 9절("기존 수집 데이터 출처를 먼저 확인") 기준으로, 예전에 같은
+# API에서 실제로 수집해 둔 CSV 스냅샷(8개 카테고리 x 4개 언어, 카테고리당 10건)을 쓴다 -
+# 실시간 조회가 정상일 때는 이 폴백까지 오지 않는다.
+_CSV_FALLBACK_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "seoulContentsNeeded.csv")
+
+
+@functools.lru_cache(maxsize=1)
+def _load_csv_fallback_rows() -> list[dict]:
+    with open(_CSV_FALLBACK_PATH, encoding="utf-8-sig") as f:
+        return list(csv.DictReader(f))
+
+
+def _csv_row_district(row: dict) -> str | None:
+    return extract_district({"traffic": {"adres": row.get("traffic_adres", ""), "new_adres": row.get("traffic_new_adres", "")}})
+
+
+def _csv_fallback_candidates(category_key: str, district: str | None, lang_code_id: str, pool_size: int) -> list[dict]:
+    csv_lang = "zh" if lang_code_id.startswith("zh") else lang_code_id
+    rows = [r for r in _load_csv_fallback_rows() if r["keyword"] == category_key and r["lang"] == csv_lang]
+    if not rows:
+        return []
+
+    if district:
+        matched = [r for r in rows if _csv_row_district(r) == district]
+        rows = matched + [r for r in rows if r not in matched]
+
+    return [
+        {
+            "cid": r["cid"],
+            "name": r["post_sj"],
+            "description": r["sumry"],
+            "photo_url": r["main_img"] or None,
+            "detail_url": build_detail_url(r["cid"], lang_code_id),
+        }
+        for r in rows[:pool_size]
+        if r.get("post_sj")
+    ]
 
 # 관심사 라벨(프론트/Gemini 기준) -> 비짓서울 CATEGORY_IDS 키. "축제/공연/행사"만 이름이 다르다.
 CATEGORY_KEY_BY_INTEREST = {"축제/공연/행사": "축제"}
@@ -186,16 +227,17 @@ def get_category_candidates(
         else _collect_district_filtered_items(category_key, district, pool_size)
     )
     if not items:
-        return []
+        return _csv_fallback_candidates(category_key, district, lang_code_id, pool_size)
 
     with ThreadPoolExecutor(max_workers=min(8, len(items))) as executor:
         localized = list(executor.map(lambda item: _localize(item, lang_code_id), items))
 
-    return [
+    result = [
         {**loc, "detail_url": build_detail_url(loc["cid"], lang_code_id)}
         for loc in localized
         if loc and loc.get("name")
     ]
+    return result or _csv_fallback_candidates(category_key, district, lang_code_id, pool_size)
 
 
 def get_candidates_by_interest(interests: list[str], district: str | None, lang_code_id: str) -> dict[str, list[dict]]:
